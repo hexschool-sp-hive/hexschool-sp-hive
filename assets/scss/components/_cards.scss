@@ -1,0 +1,59 @@
+$card-border-size: 4px;
+.custom-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &-title {
+    margin-bottom: 0px;
+    font-weight: 500;
+    background-color: $blue-300;
+    border: $card-border-size solid $blue-800;
+    box-shadow: $card-border-size * -1 $card-border-size * -1 0px 0px #00000033
+        inset,
+      $card-border-size $card-border-size 0px 0px #ffffff inset;
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+  &-body {
+    background-color: $white;
+    border-width: 0 $card-border-size $card-border-size $card-border-size;
+    border-style: solid;
+    border-color: $blue-800;
+    padding: $spacer * 1.25 $spacer * 1.25 $spacer * 1.75 $spacer * 1.25;
+    box-shadow: $card-border-size * -1 $card-border-size * -1 0px 0px #00000033
+        inset,
+      $card-border-size $card-border-size 0px 0px #ffffff inset;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &-footer {
+    border-top: 1px solid $blue-300;
+    padding-top: $spacer * 1.5;
+    display: flex;
+    justify-content: end;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  &-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 0px $card-border-size * 3 $blue-200;
+    .img-scale {
+      transform: scale(1.15);
+    }
+  }
+}

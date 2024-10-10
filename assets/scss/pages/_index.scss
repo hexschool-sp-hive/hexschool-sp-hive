@@ -1,0 +1,198 @@
+$board-border-size: 4px;
+.board {
+  padding: 0.75rem;
+  border: $board-border-size solid $blue-800;
+  height: 100%;
+  background-color: $white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $board-border-size * -1 $board-border-size * -1 0px 0px #00000033
+    inset;
+  &-title {
+    font-weight: 500;
+    background-color: $blue-300;
+    border: $board-border-size solid $blue-800;
+    box-shadow: $board-border-size * -1 $board-border-size * -1 0px 0px
+        #00000033 inset,
+      $board-border-size $board-border-size 0px 0px #ffffff inset;
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::after {
+      right: 0.75rem;
+      top: 0.75rem;
+      position: absolute;
+      content: "";
+      display: block;
+      background-position: center;
+      background-repeat: space;
+      width: 92px;
+      height: 29px;
+      background-image: url("../images/circle_button.svg");
+    }
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    gap: 1.5rem;
+  }
+  &-icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1rem;
+  }
+  &-box {
+    width: 10rem;
+  }
+  &::after {
+    position: absolute;
+    background-image: url("../images/Sparkle-1.svg");
+    background-size: cover;
+    margin: 0 20px 20px 0;
+    width: 96px;
+    height: 80px;
+    bottom: 0;
+    right: 0;
+    content: "";
+  }
+}
+
+.exhibition {
+  background-color: $blue-50;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/gradience_desktop.svg");
+    width: 100%;
+    min-height: 94px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/gradience_desktop.svg");
+    width: 100%;
+    min-height: 94px;
+    transform: rotateX(180deg);
+  }
+}
+
+.ranking {
+  background-color: $blue-50;
+  box-shadow: $board-border-size * -1 $board-border-size * -1 0px 0px #00000033
+      inset,
+    $board-border-size $board-border-size 0px 0px #ffffff inset;
+  padding: 1.5rem;
+  display: flex;
+  &-img {
+    background-image: url("../images/photo_bg.jpg");
+    padding: 42px;
+    display: inline-block;
+    box-shadow: -4px -4px 0px 0px #ffffff inset,
+      4px 4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  }
+  &-title {
+    display: flex;
+    align-items: start;
+    padding: 1.25rem 0 1.25rem 5.25rem;
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.marqee {
+  background-color: $blue-100;
+  box-shadow: -4px -4px 0px 0px #ffffff inset,
+    4px 4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  padding: 1.5rem 2rem 0 2rem;
+  overflow: hidden;
+  height: 159px;
+  &-container {
+    animation: marquee 8s linear infinite;
+  }
+  &-body {
+    border-bottom: 2px solid $white;
+    padding-bottom: 1rem;
+
+    position: relative;
+    box-shadow: 0px -2px 0px 0px $blue-300 inset;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+  }
+  &-avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.plan {
+  padding: 3rem 0;
+  &-title {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    border-bottom: 4px solid $blue-800;
+    box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset,
+      4px 4px 0px 0px #ffffff inset;
+  }
+  &-body {
+    border: $board-border-size solid $blue-800;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &-content {
+    box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset,
+      4px 4px 0px 0px #ffffff inset;
+    padding: 2rem;
+    min-height: 306px;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    padding: 0;
+    .plan {
+      &-title {
+        background-color: $blue-800;
+        color: $white;
+      }
+      &-content {
+        min-height: 382px;
+      }
+    }
+  }
+}

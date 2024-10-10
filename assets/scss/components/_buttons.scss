@@ -1,0 +1,89 @@
+$btn-border-size: 4px;
+$custom-padding-y: 0.5rem;
+$custom-padding-x: 1.25rem; // 20px
+$custom-padding-x-sm: 1rem; // 16px
+
+.custom-btn {
+  font-size: $h5-font-size;
+  padding: $custom-padding-y $custom-padding-x;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border: $btn-border-size solid $black;
+  border-radius: 0;
+
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  clip-path: polygon(
+    0% $btn-border-size,
+    $btn-border-size $btn-border-size,
+    $btn-border-size 0%,
+    calc(100% - $btn-border-size) 0%,
+    calc(100% - $btn-border-size) $btn-border-size,
+    100% $btn-border-size,
+    100% calc(100% - $btn-border-size),
+    calc(100% - $btn-border-size) calc(100% - $btn-border-size),
+    calc(100% - $btn-border-size) 100%,
+    $btn-border-size 100%,
+    $btn-border-size calc(100% - $btn-border-size),
+    0% calc(100% - $btn-border-size)
+  );
+}
+.btn-primary {
+  background: $blue-700;
+  color: $white;
+  box-shadow: -4px -4px 0px 0px #5363b4 inset;
+  &:hover {
+    background: $blue-600;
+    box-shadow: -4px -4px 0px 0px #5363b4 inset, 4px 4px 0px 0px #eff6fc inset;
+  }
+  &:active {
+    background: $blue-700;
+    box-shadow: 4px 4px 0px 0px #5363b4 inset, -4px -4px 0px 0px #eff6fc inset;
+  }
+}
+
+.custom-nav-btn {
+  border: none;
+  padding: 26px 24px 26px 16px;
+  font-weight: $font-weight-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $gray-900;
+  color: $white;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  &::before {
+    content: "";
+    display: block;
+    mask-image: url(../icons/star.svg);
+    background-color: $blue-400;
+    mask-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background-color: $blue-900;
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  // .custom-btn {
+  //   font-size: $h6-font-size;
+  // }
+  .custom-nav-btn {
+    width: 100vh;
+  }
+}

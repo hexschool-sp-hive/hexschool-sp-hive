@@ -1,0 +1,19 @@
+.img {
+  // 圖片陰影
+  &-shadow {
+    position: relative;
+    display: block;
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      box-shadow: -4px -4px 0px 0px #ffffff inset,
+        4px 4px 0px 0px #00000040 inset;
+    }
+  }
+}

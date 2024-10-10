@@ -1,0 +1,32 @@
+.nav-logo {
+  height: 3rem;
+}
+
+@include media-breakpoint-down(lg) {
+  .nav-logo {
+    height: 2.25rem;
+  }
+  .navbar-nav {
+    height: calc(100vh - 4rem);
+  }
+}
+[aria-expanded="false"] {
+  .icon {
+    &-open {
+      display: inline;
+    }
+    &-close {
+      display: none;
+    }
+  }
+}
+[aria-expanded="true"] {
+  .icon {
+    &-open {
+      display: none;
+    }
+    &-close {
+      display: inline;
+    }
+  }
+}

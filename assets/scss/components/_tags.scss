@@ -1,0 +1,21 @@
+$tag-border-size: 2px;
+.tag {
+  border: $tag-border-size solid $gray-500;
+  background-color: $gray-300;
+  padding: 2px 14px;
+  position: relative;
+  clip-path: polygon(
+    0% $tag-border-size,
+    $tag-border-size $tag-border-size,
+    $tag-border-size 0%,
+    calc(100% - $tag-border-size) 0%,
+    calc(100% - $tag-border-size) $tag-border-size,
+    100% $tag-border-size,
+    100% calc(100% - $tag-border-size),
+    calc(100% - $tag-border-size) calc(100% - $tag-border-size),
+    calc(100% - $tag-border-size) 100%,
+    $tag-border-size 100%,
+    $tag-border-size calc(100% - $tag-border-size),
+    0% calc(100% - $tag-border-size)
+  );
+}

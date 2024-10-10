@@ -1,13 +1,912 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
+  <%- include('./layout/head', {page:'首頁'}); -%>
   <body>
     <%- include('./layout/header'); -%>
+    <!-- 大圖 header -->
+    <section
+      style="
+        background-image: url('../assets/images/banner_bg_desktop.jpg');
+        background-size: cover;
+        background-position: 30%;
+        height: 720px;
+      "
+    >
+      <div class="container h-100">
+        <div
+          class="d-flex h-100 flex-column justify-content-lg-center mt-3_5r mt-lg-0 align-items-center align-items-lg-start"
+        >
+          <h1 class="fs-4r mb-lg-3 mb-8">分享你的創意瑰寶</h1>
+          <h2 class="fs-1 mb-2_5r">跟著全球創意達人一起學習！</h2>
+          <p class="mb-2_5r">
+            發掘新奇、分享快樂，這裡是創意的遊樂場，讓你的專案成為大家的談資！
+          </p>
+          <button class="custom-btn custom-btn-lg btn-primary">
+            開啟專案旅程<img
+              class="icon-white ms-2"
+              src="../assets/icons/business-product-startup-2.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- 關於 SP HIVE -->
+    <section class="bg-blue-100">
+      <div class="container">
+        <div class="pt-6r pb-9r">
+          <div class="label mx-auto mb-4r">
+            <div class="label-icon bg-success"></div>
+            <h2 class="label-title">關於 SP HIVE</h2>
+          </div>
+          <div class="position-relative mb-4r">
+            <img
+              class="d-block mx-auto"
+              style="height: 235px"
+              src="../assets/images/dialogue_desktop.png"
+              alt=""
+            />
+            <div class="position-absolute top-0 text-center w-100 pt-1_25r">
+              <p class="mb-1">
+                在這裡，你的 side project 不僅僅是作品，更是我們的話題！
+              </p>
+              <p>展示你的創意﻿，收穫讚賞與靈感！</p>
+            </div>
+          </div>
+          <div class="row mb-4_5r position-relative">
+            <div
+              data-aos="fade-right"
+              class="position-absolute top-0 start-0 translate-middle w-auto"
+            >
+              <img src="../assets/images/Sparkle.svg" alt="" />
+            </div>
+            <div class="col-8" data-aos="fade-right">
+              <div class="board">
+                <div class="board-title">
+                  <h4 class="mb-0">作品畫廊</h4>
+                </div>
+                <div class="board-content">
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/interface-essential-light-bulb.svg"
+                      alt=""
+                    />
+                    <h5>靈感啟發</h5>
+                  </div>
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/business-product-report-present-grahp.svg"
+                      alt=""
+                    />
+                    <h5>評估流行趨勢</h5>
+                  </div>
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/internet-network-www.svg"
+                      alt=""
+                    />
+                    <h5>網路拓展</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="img-shadow">
+                <img
+                  class="img-fluid"
+                  src="../assets/images/feature_01.jpg"
+                  alt="img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4_5r">
+            <div class="col-4">
+              <div class="img-shadow">
+                <img
+                  class="img-fluid"
+                  src="../assets/images/feature_02.jpg"
+                  alt="img"
+                />
+              </div>
+            </div>
+            <div class="col-8" data-aos="fade-left">
+              <div class="board">
+                <div class="board-title">
+                  <h4 class="mb-0">作品分享</h4>
+                </div>
+                <div class="board-content">
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/interface-essential-face-id-1.svg"
+                      alt=""
+                    />
+                    <h5>曝光機會</h5>
+                  </div>
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/coding-apps-websites-favorite-rate.svg"
+                      alt=""
+                    />
+                    <h5>反饋與建議</h5>
+                  </div>
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/business-products-cash-search.svg"
+                      alt=""
+                    />
+                    <h5>市場測試</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8" data-aos="fade-right">
+              <div class="board">
+                <div class="board-title">
+                  <h4 class="mb-0">蒐藏小天地</h4>
+                </div>
+                <div class="board-content">
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/content-files-archive-books-1.svg"
+                      alt=""
+                    />
+                    <h5>隨時隨地輕鬆收藏</h5>
+                  </div>
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/business-products-deal-handshake.svg"
+                      alt=""
+                    />
+                    <h5>促進互動與合作</h5>
+                  </div>
+                  <div class="board-box">
+                    <img
+                      class="board-icon"
+                      src="../assets//icons/business-product-startup-2.svg"
+                      alt=""
+                    />
+                    <h5>啟發無限創意</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="img-shadow">
+                <img
+                  class="img-fluid"
+                  src="../assets/images/feature_03.jpg"
+                  alt="img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 熱門作品 -->
+    <section class="exhibition">
+      <div class="container">
+        <div class="pb-9r pt-12r">
+          <div class="label mx-auto mb-4r">
+            <div class="label-icon bg-danger"></div>
+            <h2 class="label-title">熱門作品</h2>
+          </div>
+          <div class="row gy-4_5r">
+            <div class="col-4">
+              <div class="custom-card">
+                <h5 class="custom-card-title">專案名稱</h5>
+                <div class="custom-card-body">
+                  <div class="custom-card-content">
+                    <div class="img-shadow mb-3 animation-box">
+                      <img
+                        class="img-fluid img-scale animation-transition"
+                        src="../assets/images/project_cover_01.jpg"
+                        alt="project"
+                      />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        class="custom-card-avatar"
+                        src="../assets/images/avatar_王大明.jpg"
+                        alt="avatar"
+                      />
+                      <p class="mb-0 ms-0_75r fs-5 fw-medium">王大明</p>
+                    </div>
+
+                    <p class="mb-4">
+                      遊戲中採用了最新的圖形渲染技術，實現了高質量的視覺效果和真實的光影效果。結合高保真的音效處理，營造出身臨其境的戰鬥氛圍，讓每一次射...
+                    </p>
+                    <div class="mb-4 mt-auto">
+                      <span class="tag me-2">java</span>
+                      <span class="tag me-2">unity</span>
+                      <span class="tag">射擊</span>
+                    </div>
+                  </div>
+                  <div class="custom-card-footer">
+                    <div class="d-flex align-items-center me-3">
+                      <img
+                        src="../assets/icons/social-rewards-heart-like-circle.svg"
+                        alt="heart"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/icons/social-rewards-certified-ribbon.svg"
+                        alt="ribbon"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="custom-card">
+                <h5 class="custom-card-title">專案名稱</h5>
+                <div class="custom-card-body">
+                  <div class="custom-card-content">
+                    <div class="img-shadow mb-3 animation-box">
+                      <img
+                        class="img-fluid img-scale animation-transition"
+                        src="../assets/images/project_cover_02.jpg"
+                        alt="project"
+                      />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        class="custom-card-avatar"
+                        src="../assets/images/avatar_陳志明.jpg"
+                        alt="avatar"
+                      />
+                      <p class="mb-0 ms-0_75r fs-5 fw-medium">陳志明</p>
+                    </div>
+
+                    <p class="mb-4">
+                      這款程式設計工具提供了強大的代碼自動完成和錯誤檢查功能。結合智能提示系統，開發者能夠快速編寫高效且無錯誤的代碼，提升開發效率。
+                    </p>
+                    <div class="mb-4 mt-auto">
+                      <span class="tag me-2">java</span>
+                      <span class="tag me-2">IDE</span>
+                    </div>
+                  </div>
+                  <div class="custom-card-footer">
+                    <div class="d-flex align-items-center me-3">
+                      <img
+                        src="../assets/icons/social-rewards-heart-like-circle.svg"
+                        alt="heart"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/icons/social-rewards-certified-ribbon.svg"
+                        alt="ribbon"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="custom-card">
+                <h5 class="custom-card-title">專案名稱</h5>
+                <div class="custom-card-body">
+                  <div class="custom-card-content">
+                    <div class="img-shadow mb-3 animation-box">
+                      <img
+                        class="img-fluid img-scale animation-transition"
+                        src="../assets/images/project_cover_03.jpg"
+                        alt="project"
+                      />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        class="custom-card-avatar"
+                        src="../assets/images/avatar_李靜雯.jpg"
+                        alt="avatar"
+                      />
+                      <p class="mb-0 ms-0_75r fs-5 fw-medium">李靜雯</p>
+                    </div>
+
+                    <p class="mb-4">
+                      新推出的手機APP專注於健康管理，結合了實時心率監測和個性化健身建議。通過精確的數據分析，幫助用戶達到最佳健康狀態。
+                    </p>
+                    <div class="mb-4 mt-auto">
+                      <span class="tag me-2">swift</span>
+                      <span class="tag me-2">健康管理</span>
+                      <span class="tag">心律偵測</span>
+                    </div>
+                  </div>
+                  <div class="custom-card-footer">
+                    <div class="d-flex align-items-center me-3">
+                      <img
+                        src="../assets/icons/social-rewards-heart-like-circle.svg"
+                        alt="heart"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/icons/social-rewards-certified-ribbon.svg"
+                        alt="ribbon"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="custom-card">
+                <h5 class="custom-card-title">專案名稱</h5>
+                <div class="custom-card-body">
+                  <div class="custom-card-content">
+                    <div class="img-shadow mb-3 animation-box">
+                      <img
+                        class="img-fluid img-scale animation-transition"
+                        src="../assets/images/project_cover_04.jpg"
+                        alt="project"
+                      />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        class="custom-card-avatar"
+                        src="../assets/images/avatar_趙青山.jpg"
+                        alt="avatar"
+                      />
+                      <p class="mb-0 ms-0_75r fs-5 fw-medium">趙青山</p>
+                    </div>
+
+                    <p class="mb-4">
+                      這個網頁應用集成了即時聊天功能，支持多人同時在線交流。採用了
+                      WebSocket 技術，實現了低延遲和高效的實時通信。
+                    </p>
+                    <div class="mb-4 mt-auto">
+                      <span class="tag me-2">nodejs</span>
+                      <span class="tag me-2">WebSocket</span>
+                      <span class="tag">即時聊天</span>
+                    </div>
+                  </div>
+                  <div class="custom-card-footer">
+                    <div class="d-flex align-items-center me-3">
+                      <img
+                        src="../assets/icons/social-rewards-heart-like-circle.svg"
+                        alt="heart"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/icons/social-rewards-certified-ribbon.svg"
+                        alt="ribbon"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="custom-card">
+                <h5 class="custom-card-title">專案名稱</h5>
+                <div class="custom-card-body">
+                  <div class="custom-card-content">
+                    <div class="img-shadow mb-3 animation-box">
+                      <img
+                        class="img-fluid img-scale animation-transition"
+                        src="../assets/images/project_cover_05.jpg"
+                        alt="project"
+                      />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        class="custom-card-avatar"
+                        src="../assets/images/avatar_張志宏.jpg"
+                        alt="avatar"
+                      />
+                      <p class="mb-0 ms-0_75r fs-5 fw-medium">張志宏</p>
+                    </div>
+
+                    <p class="mb-4">
+                      本網站運用了最新的安全加密技術，保護用戶數據不受未授權訪問。結合多重身份驗證機制，確保每一筆交易和用戶信息的安全性。
+                    </p>
+                    <div class="mb-4 mt-auto">
+                      <span class="tag me-2">security</span>
+                      <span class="tag me-2">加密技術</span>
+                      <span class="tag">身份驗證</span>
+                    </div>
+                  </div>
+                  <div class="custom-card-footer">
+                    <div class="d-flex align-items-center me-3">
+                      <img
+                        src="../assets/icons/social-rewards-heart-like-circle.svg"
+                        alt="heart"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/icons/social-rewards-certified-ribbon.svg"
+                        alt="ribbon"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="custom-card">
+                <h5 class="custom-card-title">專案名稱</h5>
+                <div class="custom-card-body">
+                  <div class="custom-card-content">
+                    <div class="img-shadow mb-3 animation-box">
+                      <img
+                        class="img-fluid img-scale animation-transition"
+                        src="../assets/images/project_cover_06.jpg"
+                        alt="project"
+                      />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        class="custom-card-avatar"
+                        src="../assets/images/avatar_陳佩琪.jpg"
+                        alt="avatar"
+                      />
+                      <p class="mb-0 ms-0_75r fs-5 fw-medium">陳佩琪</p>
+                    </div>
+
+                    <p class="mb-4">
+                      這款桌面應用程式整合了多種生產力工具，支持任務管理、日曆安排和提醒功能。界面簡潔直觀，幫助用戶高效管理日常工作和個人計劃。
+                    </p>
+                    <div class="mb-4 mt-auto">
+                      <span class="tag me-2">csharp</span>
+                      <span class="tag me-2">桌面應用</span>
+                      <span class="tag">生產力</span>
+                    </div>
+                  </div>
+                  <div class="custom-card-footer">
+                    <div class="d-flex align-items-center me-3">
+                      <img
+                        src="../assets/icons/social-rewards-heart-like-circle.svg"
+                        alt="heart"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="../assets/icons/social-rewards-certified-ribbon.svg"
+                        alt="ribbon"
+                      />
+                      <p class="mb-0">1000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6r">
+            <button class="custom-btn custom-btn-lg btn-primary ms-auto">
+              更多作品<img
+                class="icon-white ms-2"
+                src="../assets/icons/cursor-hand.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 大神榜單 -->
+    <section
+      style="
+        background-image: url('../assets/images/code_background.jpg');
+        background-size: cover;
+      "
+    >
+      <div class="container">
+        <div class="py-9r">
+          <div class="bg-nail pt-6r pb-12r px-9r">
+            <span class="bg-nail-top"></span>
+            <span class="bg-nail-bottom"></span>
+            <div class="label mx-auto mb-4r">
+              <div class="label-icon bg-cyan"></div>
+              <h2 class="label-title">大神榜單</h2>
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+              <div class="ranking mb-4_5r">
+                <div class="ranking-img w-auto">
+                  <img
+                    class="border-4 border-black border"
+                    src="../assets/images/photo_趙青山.jpg"
+                    alt="people"
+                  />
+                </div>
+                <div class="ms-1_25r w-100 d-flex flex-column">
+                  <div class="ranking-title">
+                    <img
+                      class="me-1_25r ranking-icon"
+                      src="../assets/images/ranking_01.svg"
+                      alt="ranking"
+                    />
+                    <div>
+                      <h3 class="mb-1">趙青山</h3>
+                      <small>7,442 人追蹤中</small>
+                    </div>
+                    <button
+                      class="custom-btn custom-btn-lg btn-primary ms-auto"
+                    >
+                      查看作者<img
+                        class="icon-white ms-2"
+                        src="../assets/icons/search-user.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                  <div class="marqee flex-grow-1">
+                    <div class="marqee-container">
+                      <div class="marqee-body">
+                        <div class="marqee-title">
+                          <img
+                            class="marqee-avatar"
+                            src="../assets/images/avatar_陳佩琪.jpg"
+                            alt="avatar"
+                          />
+                          <h6 class="mb-0 fw-medium mx-0_75r">A粉絲</h6>
+                          <small>2024-09-25 15:30</small>
+                        </div>
+
+                        <p class="mb-0 mt-2">
+                          本網站運用了最新的安全加密技術，保護用戶數據不受未授權訪問。結合多重身份驗證機制，確保每一筆交易和用戶信息的安全性。
+                        </p>
+                      </div>
+                      <div class="marqee-body">
+                        <div class="marqee-title">
+                          <img
+                            class="marqee-avatar"
+                            src="../assets/images/avatar_李靜雯.jpg"
+                            alt="avatar"
+                          />
+                          <h6 class="mb-0 fw-medium mx-0_75r">B粉絲</h6>
+                          <small>2024-09-25 15:30</small>
+                        </div>
+
+                        <p class="mb-0 mt-2">
+                          你的技術實力無可挑剔！你對Java和Node.js的深刻理解，以及你在實時通信方面的應用,無疑提升了我們的使用體驗。期待你未來更多的創新,祝你越來越成功!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ranking mb-4_5r">
+                <div class="ranking-img w-auto">
+                  <img
+                    class="border-4 border-black border"
+                    src="../assets/images/photo_陳佩琪.jpg"
+                    alt="people"
+                  />
+                </div>
+                <div class="ms-1_25r w-100 d-flex flex-column">
+                  <div class="ranking-title">
+                    <img
+                      class="me-1_25r ranking-icon"
+                      src="../assets/images/ranking_02.svg"
+                      alt="ranking"
+                    />
+                    <div>
+                      <h3 class="mb-1">陳佩琪</h3>
+                      <small>5,954 人追蹤中</small>
+                    </div>
+                    <button
+                      class="custom-btn custom-btn-lg btn-primary ms-auto"
+                    >
+                      查看作者<img
+                        class="icon-white ms-2"
+                        src="../assets/icons/search-user.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                  <div class="marqee flex-grow-1">
+                    <div class="marqee-container">
+                      <div class="marqee-body">
+                        <div class="marqee-title">
+                          <img
+                            class="marqee-avatar"
+                            src="../assets/images/avatar_陳佩琪.jpg"
+                            alt="avatar"
+                          />
+                          <h6 class="mb-0 fw-medium mx-0_75r">X粉絲</h6>
+                          <small>2024-09-25 15:30</small>
+                        </div>
+
+                        <p class="mb-0 mt-2">
+                          你的桌面應用程式真是太實用了！把任務管理、日曆安排和提醒功能整合在一起，讓我工作和生活的管理變得更加高效。你在C#和生產力工具上的專業知識讓這個應用如此出色，期待你未來的更多創新
+                        </p>
+                      </div>
+                      <div class="marqee-body">
+                        <div class="marqee-title">
+                          <img
+                            class="marqee-avatar"
+                            src="../assets/images/avatar_李靜雯.jpg"
+                            alt="avatar"
+                          />
+                          <h6 class="mb-0 fw-medium mx-0_75r">B粉絲</h6>
+                          <small>2024-09-25 15:30</small>
+                        </div>
+
+                        <p class="mb-0 mt-2">
+                          你的技術實力無可挑剔！你對Java和Node.js的深刻理解，以及你在實時通信方面的應用,無疑提升了我們的使用體驗。期待你未來更多的創新,祝你越來越成功!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ranking">
+                <div class="ranking-img w-auto">
+                  <img
+                    class="border-4 border-black border"
+                    src="../assets/images/photo_陳志明.jpg"
+                    alt="people"
+                  />
+                </div>
+                <div class="ms-1_25r w-100 d-flex flex-column">
+                  <div class="ranking-title">
+                    <img
+                      class="me-1_25r ranking-icon"
+                      src="../assets/images/ranking_03.svg"
+                      alt="ranking"
+                    />
+                    <div>
+                      <h3 class="mb-1">陳志明</h3>
+                      <small>3,567 人追蹤中</small>
+                    </div>
+                    <button
+                      class="custom-btn custom-btn-lg btn-primary ms-auto"
+                    >
+                      查看作者<img
+                        class="icon-white ms-2"
+                        src="../assets/icons/search-user.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                  <div class="marqee flex-grow-1">
+                    <div class="marqee-container">
+                      <div class="marqee-body">
+                        <div class="marqee-title">
+                          <img
+                            class="marqee-avatar"
+                            src="../assets/images/avatar_陳佩琪.jpg"
+                            alt="avatar"
+                          />
+                          <h6 class="mb-0 fw-medium mx-0_75r">A粉絲</h6>
+                          <small>2024-09-25 15:30</small>
+                        </div>
+
+                        <p class="mb-0 mt-2">
+                          本網站運用了最新的安全加密技術，保護用戶數據不受未授權訪問。結合多重身份驗證機制，確保每一筆交易和用戶信息的安全性。
+                        </p>
+                      </div>
+                      <div class="marqee-body">
+                        <div class="marqee-title">
+                          <img
+                            class="marqee-avatar"
+                            src="../assets/images/avatar_李靜雯.jpg"
+                            alt="avatar"
+                          />
+                          <h6 class="mb-0 fw-medium mx-0_75r">A粉絲</h6>
+                          <small>2024-09-25 15:30</small>
+                        </div>
+
+                        <p class="mb-0 mt-2">
+                          你的技術實力無可挑剔！你對Java和Node.js的深刻理解，以及你在實時通信方面的應用,無疑提升了我們的使用體驗。期待你未來更多的創新,祝你越來越成功!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 方案介紹 -->
+    <section class="bg-blue-100">
+      <div class="container">
+        <div class="pt-6r pb-9r">
+          <div class="label mx-auto mb-6r">
+            <div class="label-icon bg-magenta"></div>
+            <h2 class="label-title">方案介紹</h2>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <div class="plan">
+                <div class="plan-body">
+                  <div class="plan-title">
+                    <h4 class="fw-medium mb-0">免費</h4>
+                    <h4 class="fw-medium fs-1 mb-0 ms-auto">$0</h4>
+                  </div>
+                  <div class="plan-content">
+                    <ul class="list-unstyled">
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">完全免費</p>
+                      </li>
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">上傳 3 篇作品內容</p>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">每篇作品附帶 1 張圖片</p>
+                      </li>
+                    </ul>
+                    <button
+                      class="custom-btn custom-btn-lg btn-primary w-100 mt-auto"
+                    >
+                      我要使用免費版<img
+                        class="icon-white ms-2"
+                        src="../assets/icons/cursor-hand.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="plan">
+                <div class="plan-body">
+                  <div class="plan-title">
+                    <h4 class="fw-medium mb-0">月付費</h4>
+                    <h4 class="fw-medium fs-1 mb-0 ms-auto">$150</h4>
+                    <small class="align-self-end">/月</small>
+                  </div>
+                  <div class="plan-content">
+                    <ul class="list-unstyled">
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">超值專業方案，只需 $150 / 月！</p>
+                      </li>
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">無限制上傳作品內容</p>
+                      </li>
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">每篇作品附帶 3 張精美圖片</p>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">加上 1 部影片，生動呈現</p>
+                      </li>
+                    </ul>
+                    <button
+                      class="custom-btn custom-btn-lg btn-primary w-100 mt-auto"
+                    >
+                      我要使用月付費<img
+                        class="icon-white ms-2"
+                        src="../assets/icons/cursor-hand.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="plan">
+                <div class="plan-body">
+                  <div class="plan-title">
+                    <h4 class="fw-medium mb-0">年付費</h4>
+                    <h4 class="fw-medium fs-1 mb-0 ms-auto">$1099</h4>
+                    <small class="align-self-end">/月</small>
+                  </div>
+                  <div class="plan-content">
+                    <ul class="list-unstyled">
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">超值優惠，僅需 $1099 / 年</p>
+                      </li>
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">購買一年再送一個月</p>
+                      </li>
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">無限制上傳作品內容</p>
+                      </li>
+                      <li class="d-flex align-items-center mb-0_75r">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">每篇作品附帶 3 張精美圖片</p>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <img
+                          src="../assets/icons/business-product-check.svg"
+                          alt="icon"
+                          class="me-2 plan-icon"
+                        />
+                        <p class="mb-0">加上 1 部影片，生動呈現</p>
+                      </li>
+                    </ul>
+                    <button
+                      class="custom-btn custom-btn-lg btn-primary w-100 mt-auto"
+                    >
+                      我要使用年付費<img
+                        class="icon-white ms-2"
+                        src="../assets/icons/cursor-hand.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

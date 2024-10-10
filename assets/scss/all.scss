@@ -29,10 +29,10 @@
     transition: all 0.3s ease;
   }
 }
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-up(lg) {
   .w {
-    &-sm-100 {
-      width: 100%;
+    &-lg-auto {
+      width: auto !important;
     }
   }
 }

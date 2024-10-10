@@ -1,13 +1,15 @@
 .nav-logo {
-  height: 3rem;
+  height: 2.25rem;
 }
-
-@include media-breakpoint-down(lg) {
+.navbar-nav {
+  height: calc(100vh - 4rem);
+}
+@include media-breakpoint-up(lg) {
   .nav-logo {
-    height: 2.25rem;
+    height: 3rem;
   }
   .navbar-nav {
-    height: calc(100vh - 4rem);
+    height: 100%;
   }
 }
 [aria-expanded="false"] {

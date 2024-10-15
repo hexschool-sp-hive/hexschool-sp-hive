@@ -4,24 +4,17 @@
   <body>
     <%- include('./layout/header'); -%>
     <!-- 大圖 header -->
-    <section
-      style="
-        background-image: url('../assets/images/banner_bg_desktop.jpg');
-        background-size: cover;
-        background-position: 30%;
-        height: 720px;
-      "
-    >
+    <section class="banner">
       <div class="container h-100">
         <div
           class="d-flex h-100 flex-column justify-content-lg-center mt-3_5r mt-lg-0 align-items-center align-items-lg-start"
         >
-          <h1 class="fs-4r mb-lg-3 mb-8">分享你的創意瑰寶</h1>
-          <h2 class="fs-1 mb-2_5r">跟著全球創意達人一起學習！</h2>
-          <p class="mb-2_5r">
+          <h1 class="fs-lg-4r mb-2 mb-lg-3 mb-lg-8">分享你的創意瑰寶</h1>
+          <h4 class="fs-lg-1 mb-4 mb-lg-2_5r">跟著全球創意達人一起學習！</h4>
+          <p class="mb-lg-2_5r mb-4 text-center text-lg-start">
             發掘新奇、分享快樂，這裡是創意的遊樂場，讓你的專案成為大家的談資！
           </p>
-          <button class="custom-btn custom-btn-lg btn-primary">
+          <button class="custom-btn btn-primary">
             開啟專案旅程<img
               class="icon-white ms-2"
               src="../assets/icons/business-product-startup-2.svg"
@@ -34,33 +27,46 @@
     <!-- 關於 SP HIVE -->
     <section class="bg-blue-100">
       <div class="container">
-        <div class="pt-6r pb-9r">
-          <div class="label mx-auto mb-4r">
+        <div class="pt-lg-6r pb-lg-9r py-5 py-lg-0">
+          <div class="label mx-auto mb-lg-4r mb-4">
             <div class="label-icon bg-success"></div>
             <h2 class="label-title">關於 SP HIVE</h2>
           </div>
-          <div class="position-relative mb-4r">
-            <img
-              class="d-block mx-auto"
-              style="height: 235px"
-              src="../assets/images/dialogue_desktop.png"
-              alt=""
-            />
-            <div class="position-absolute top-0 text-center w-100 pt-1_25r">
-              <p class="mb-1">
-                在這裡，你的 side project 不僅僅是作品，更是我們的話題！
-              </p>
-              <p>展示你的創意﻿，收穫讚賞與靈感！</p>
+          <div class="text-center mb-lg-4r mb-4">
+            <div class="position-relative d-inline-block">
+              <picture>
+                <!-- 當螢幕寬度少於600px時，替換圖片 -->
+                <source
+                  srcset="../assets/images/dialogue_mobile.png"
+                  media="(max-width: 992px)"
+                />
+                <!-- 預設圖片，通常是桌面版本 -->
+                <img
+                  class="d-block mx-auto"
+                  style="height: 235px"
+                  src="../assets/images/dialogue_desktop.png"
+                  alt=""
+                />
+              </picture>
+
+              <div
+                class="position-absolute top-0 text-center w-100 pt-3 pt-lg-1_25r px-lg-3_25r px-2_75r"
+              >
+                <small class="mb-1 fs-lg-6">
+                  在這裡，你的 side project 不僅僅是作品，更是我們的話題！
+                </small>
+                <small>展示你的創意﻿，收穫讚賞與靈感！</small>
+              </div>
             </div>
           </div>
-          <div class="row mb-4_5r position-relative">
+          <div class="row mb-5 mb-lg-4_5r position-relative">
             <div
               data-aos="fade-right"
-              class="position-absolute top-0 start-0 translate-middle w-auto"
+              class="position-absolute top-0 start-0 translate-middle w-auto d-none d-lg-block"
             >
               <img src="../assets/images/Sparkle.svg" alt="" />
             </div>
-            <div class="col-8" data-aos="fade-right">
+            <div class="col-lg-8 order-last order-lg-1" data-aos="fade-right">
               <div class="board">
                 <div class="board-title">
                   <h4 class="mb-0">作品畫廊</h4>
@@ -72,7 +78,7 @@
                       src="../assets//icons/interface-essential-light-bulb.svg"
                       alt=""
                     />
-                    <h5>靈感啟發</h5>
+                    <h6 class="mb-0">靈感啟發</h6>
                   </div>
                   <div class="board-box">
                     <img
@@ -80,7 +86,7 @@
                       src="../assets//icons/business-product-report-present-grahp.svg"
                       alt=""
                     />
-                    <h5>評估流行趨勢</h5>
+                    <h6 class="mb-0">評估流行趨勢</h6>
                   </div>
                   <div class="board-box">
                     <img
@@ -88,23 +94,23 @@
                       src="../assets//icons/internet-network-www.svg"
                       alt=""
                     />
-                    <h5>網路拓展</h5>
+                    <h6 class="mb-0">網路拓展</h6>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 order-first order-lg-last">
               <div class="img-shadow">
                 <img
-                  class="img-fluid"
+                  class="img-fluid board-img"
                   src="../assets/images/feature_01.jpg"
                   alt="img"
                 />
               </div>
             </div>
           </div>
-          <div class="row mb-4_5r">
-            <div class="col-4">
+          <div class="row mb-5 mb-lg-4_5r">
+            <div class="col-lg-4">
               <div class="img-shadow">
                 <img
                   class="img-fluid"
@@ -113,7 +119,7 @@
                 />
               </div>
             </div>
-            <div class="col-8" data-aos="fade-left">
+            <div class="col-lg-8" data-aos="fade-left">
               <div class="board">
                 <div class="board-title">
                   <h4 class="mb-0">作品分享</h4>
@@ -125,7 +131,7 @@
                       src="../assets//icons/interface-essential-face-id-1.svg"
                       alt=""
                     />
-                    <h5>曝光機會</h5>
+                    <h6 class="mb-0">曝光機會</h6>
                   </div>
                   <div class="board-box">
                     <img
@@ -133,7 +139,7 @@
                       src="../assets//icons/coding-apps-websites-favorite-rate.svg"
                       alt=""
                     />
-                    <h5>反饋與建議</h5>
+                    <h6 class="mb-0">反饋與建議</h6>
                   </div>
                   <div class="board-box">
                     <img
@@ -141,14 +147,14 @@
                       src="../assets//icons/business-products-cash-search.svg"
                       alt=""
                     />
-                    <h5>市場測試</h5>
+                    <h6 class="mb-0">市場測試</h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-8" data-aos="fade-right">
+            <div class="col-lg-8 order-last order-lg-1" data-aos="fade-right">
               <div class="board">
                 <div class="board-title">
                   <h4 class="mb-0">蒐藏小天地</h4>
@@ -160,7 +166,7 @@
                       src="../assets//icons/content-files-archive-books-1.svg"
                       alt=""
                     />
-                    <h5>隨時隨地輕鬆收藏</h5>
+                    <h6 class="mb-0">隨時隨地輕鬆收藏</h6>
                   </div>
                   <div class="board-box">
                     <img
@@ -168,7 +174,7 @@
                       src="../assets//icons/business-products-deal-handshake.svg"
                       alt=""
                     />
-                    <h5>促進互動與合作</h5>
+                    <h6 class="mb-0">促進互動與合作</h6>
                   </div>
                   <div class="board-box">
                     <img
@@ -176,12 +182,12 @@
                       src="../assets//icons/business-product-startup-2.svg"
                       alt=""
                     />
-                    <h5>啟發無限創意</h5>
+                    <h6 class="mb-0">啟發無限創意</h6>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 order-first order-lg-last">
               <div class="img-shadow">
                 <img
                   class="img-fluid"
@@ -197,13 +203,13 @@
     <!-- 熱門作品 -->
     <section class="exhibition">
       <div class="container">
-        <div class="pb-9r pt-12r">
-          <div class="label mx-auto mb-4r">
+        <div class="pb-lg-9r pt-lg-12r py-8r">
+          <div class="label mx-auto mb-lg-4r mb-5">
             <div class="label-icon bg-danger"></div>
             <h2 class="label-title">熱門作品</h2>
           </div>
-          <div class="row gy-4_5r">
-            <div class="col-4">
+          <div class="row gy-4 gy-lg-4_5r">
+            <div class="col-lg-4">
               <div class="custom-card">
                 <h5 class="custom-card-title">專案名稱</h5>
                 <div class="custom-card-body">
@@ -215,7 +221,7 @@
                         alt="project"
                       />
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center mb-lg-3 mb-0_75r">
                       <img
                         class="custom-card-avatar"
                         src="../assets/images/avatar_王大明.jpg"
@@ -224,10 +230,10 @@
                       <p class="mb-0 ms-0_75r fs-5 fw-medium">王大明</p>
                     </div>
 
-                    <p class="mb-4">
+                    <p class="mb-lg-4 mb-3">
                       遊戲中採用了最新的圖形渲染技術，實現了高質量的視覺效果和真實的光影效果。結合高保真的音效處理，營造出身臨其境的戰鬥氛圍，讓每一次射...
                     </p>
-                    <div class="mb-4 mt-auto">
+                    <div class="mb-lg-4 mb-3 mt-auto">
                       <span class="tag me-2">java</span>
                       <span class="tag me-2">unity</span>
                       <span class="tag">射擊</span>
@@ -252,7 +258,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="custom-card">
                 <h5 class="custom-card-title">專案名稱</h5>
                 <div class="custom-card-body">
@@ -264,7 +270,7 @@
                         alt="project"
                       />
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center mb-lg-3 mb-0_75r">
                       <img
                         class="custom-card-avatar"
                         src="../assets/images/avatar_陳志明.jpg"
@@ -273,10 +279,10 @@
                       <p class="mb-0 ms-0_75r fs-5 fw-medium">陳志明</p>
                     </div>
 
-                    <p class="mb-4">
+                    <p class="mb-lg-4 mb-3">
                       這款程式設計工具提供了強大的代碼自動完成和錯誤檢查功能。結合智能提示系統，開發者能夠快速編寫高效且無錯誤的代碼，提升開發效率。
                     </p>
-                    <div class="mb-4 mt-auto">
+                    <div class="mb-lg-4 mb-3 mt-auto">
                       <span class="tag me-2">java</span>
                       <span class="tag me-2">IDE</span>
                     </div>
@@ -300,7 +306,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="custom-card">
                 <h5 class="custom-card-title">專案名稱</h5>
                 <div class="custom-card-body">
@@ -312,7 +318,7 @@
                         alt="project"
                       />
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center mb-lg-3 mb-0_75r">
                       <img
                         class="custom-card-avatar"
                         src="../assets/images/avatar_李靜雯.jpg"
@@ -321,10 +327,10 @@
                       <p class="mb-0 ms-0_75r fs-5 fw-medium">李靜雯</p>
                     </div>
 
-                    <p class="mb-4">
+                    <p class="mb-lg-4 mb-3">
                       新推出的手機APP專注於健康管理，結合了實時心率監測和個性化健身建議。通過精確的數據分析，幫助用戶達到最佳健康狀態。
                     </p>
-                    <div class="mb-4 mt-auto">
+                    <div class="mb-lg-4 mb-3 mt-auto">
                       <span class="tag me-2">swift</span>
                       <span class="tag me-2">健康管理</span>
                       <span class="tag">心律偵測</span>
@@ -349,7 +355,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="custom-card">
                 <h5 class="custom-card-title">專案名稱</h5>
                 <div class="custom-card-body">
@@ -361,7 +367,7 @@
                         alt="project"
                       />
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center mb-lg-3 mb-0_75r">
                       <img
                         class="custom-card-avatar"
                         src="../assets/images/avatar_趙青山.jpg"
@@ -371,10 +377,11 @@
                     </div>
 
                     <p class="mb-4">
-                      這個網頁應用集成了即時聊天功能，支持多人同時在線交流。採用了
-                      WebSocket 技術，實現了低延遲和高效的實時通信。
+                      這個網頁應用集-lg成了
+                      mb-3即時聊天功能，支持多人同時在線交流。採用了 WebSocket
+                      技術，實現了低延遲和高效的實時通信。
                     </p>
-                    <div class="mb-4 mt-auto">
+                    <div class="mb-lg-4 mb-3 mt-auto">
                       <span class="tag me-2">nodejs</span>
                       <span class="tag me-2">WebSocket</span>
                       <span class="tag">即時聊天</span>
@@ -399,7 +406,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="custom-card">
                 <h5 class="custom-card-title">專案名稱</h5>
                 <div class="custom-card-body">
@@ -411,7 +418,7 @@
                         alt="project"
                       />
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center mb-lg-3 mb-0_75r">
                       <img
                         class="custom-card-avatar"
                         src="../assets/images/avatar_張志宏.jpg"
@@ -420,10 +427,10 @@
                       <p class="mb-0 ms-0_75r fs-5 fw-medium">張志宏</p>
                     </div>
 
-                    <p class="mb-4">
+                    <p class="mb-lg-4 mb-3">
                       本網站運用了最新的安全加密技術，保護用戶數據不受未授權訪問。結合多重身份驗證機制，確保每一筆交易和用戶信息的安全性。
                     </p>
-                    <div class="mb-4 mt-auto">
+                    <div class="mb-lg-4 mb-3 mt-auto">
                       <span class="tag me-2">security</span>
                       <span class="tag me-2">加密技術</span>
                       <span class="tag">身份驗證</span>
@@ -448,7 +455,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="custom-card">
                 <h5 class="custom-card-title">專案名稱</h5>
                 <div class="custom-card-body">
@@ -460,7 +467,7 @@
                         alt="project"
                       />
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center mb-lg-3 mb-0_75r">
                       <img
                         class="custom-card-avatar"
                         src="../assets/images/avatar_陳佩琪.jpg"
@@ -469,10 +476,10 @@
                       <p class="mb-0 ms-0_75r fs-5 fw-medium">陳佩琪</p>
                     </div>
 
-                    <p class="mb-4">
+                    <p class="mb-lg-4 mb-3">
                       這款桌面應用程式整合了多種生產力工具，支持任務管理、日曆安排和提醒功能。界面簡潔直觀，幫助用戶高效管理日常工作和個人計劃。
                     </p>
-                    <div class="mb-4 mt-auto">
+                    <div class="mb-lg-4 mb-3 mt-auto">
                       <span class="tag me-2">csharp</span>
                       <span class="tag me-2">桌面應用</span>
                       <span class="tag">生產力</span>
@@ -498,8 +505,8 @@
               </div>
             </div>
           </div>
-          <div class="mt-6r">
-            <button class="custom-btn custom-btn-lg btn-primary ms-auto">
+          <div class="mt-5 mt-lg-6r">
+            <button class="custom-btn btn-primary mx-auto mx-lg-0 ms-lg-auto">
               更多作品<img
                 class="icon-white ms-2"
                 src="../assets/icons/cursor-hand.svg"
@@ -518,45 +525,39 @@
       "
     >
       <div class="container">
-        <div class="py-9r">
-          <div class="bg-nail pt-6r pb-12r px-9r">
-            <span class="bg-nail-top"></span>
-            <span class="bg-nail-bottom"></span>
+        <div class="py-lg-9r py-5">
+          <div class="bg-nail pt-lg-6r pb-lg-12r px-xl-9r px-lg-6r">
+            <span class="bg-nail-top d-none d-lg-block"></span>
+            <span class="bg-nail-bottom d-none d-lg-block"></span>
             <div class="label mx-auto mb-4r">
               <div class="label-icon bg-cyan"></div>
               <h2 class="label-title">大神榜單</h2>
             </div>
+
             <div class="d-flex flex-column justify-content-center">
-              <div class="ranking mb-4_5r">
+              <div class="ranking mb-4 mb-lg-4_5r">
                 <div class="ranking-img w-auto">
                   <img
-                    class="border-4 border-black border"
+                    class="border-4 border-black border w-100 w-lg-auto"
                     src="../assets/images/photo_趙青山.jpg"
                     alt="people"
                   />
                 </div>
-                <div class="ms-1_25r w-100 d-flex flex-column">
-                  <div class="ranking-title">
-                    <img
-                      class="me-1_25r ranking-icon"
-                      src="../assets/images/ranking_01.svg"
-                      alt="ranking"
-                    />
-                    <div>
+                <div
+                  class="ms-lg-1_25r w-100 d-flex flex-column flex-lg-row flex-wrap align-items-lg-center"
+                >
+                  <div class="ranking-title mb-3 mb-lg-0 order-lg-1">
+                    <div class="align-self-center order-lg-2 my-lg-4">
                       <h3 class="mb-1">趙青山</h3>
                       <small>7,442 人追蹤中</small>
                     </div>
-                    <button
-                      class="custom-btn custom-btn-lg btn-primary ms-auto"
-                    >
-                      查看作者<img
-                        class="icon-white ms-2"
-                        src="../assets/icons/search-user.svg"
-                        alt=""
-                      />
-                    </button>
+                    <img
+                      class="me-lg-1_25r ranking-icon order-lg-1"
+                      src="../assets/images/ranking_01.svg"
+                      alt="ranking"
+                    />
                   </div>
-                  <div class="marqee flex-grow-1">
+                  <div class="marqee flex-grow-1 order-lg-3">
                     <div class="marqee-container">
                       <div class="marqee-body">
                         <div class="marqee-title">
@@ -590,38 +591,40 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="custom-btn btn-primary mx-auto mx-lg-0 mt-3 mt-lg-0 order-lg-2 ms-lg-auto"
+                  >
+                    查看作者<img
+                      class="icon-white ms-2"
+                      src="../assets/icons/search-user.svg"
+                      alt=""
+                    />
+                  </button>
                 </div>
               </div>
-              <div class="ranking mb-4_5r">
+              <div class="ranking mb-4 mb-lg-4_5r">
                 <div class="ranking-img w-auto">
                   <img
-                    class="border-4 border-black border"
+                    class="border-4 border-black border w-100 w-lg-auto"
                     src="../assets/images/photo_陳佩琪.jpg"
                     alt="people"
                   />
                 </div>
-                <div class="ms-1_25r w-100 d-flex flex-column">
-                  <div class="ranking-title">
-                    <img
-                      class="me-1_25r ranking-icon"
-                      src="../assets/images/ranking_02.svg"
-                      alt="ranking"
-                    />
-                    <div>
+                <div
+                  class="ms-lg-1_25r w-100 d-flex flex-column flex-lg-row flex-wrap align-items-lg-center"
+                >
+                  <div class="ranking-title mb-3 mb-lg-0 order-lg-1">
+                    <div class="align-self-center order-lg-2 my-lg-4">
                       <h3 class="mb-1">陳佩琪</h3>
                       <small>5,954 人追蹤中</small>
                     </div>
-                    <button
-                      class="custom-btn custom-btn-lg btn-primary ms-auto"
-                    >
-                      查看作者<img
-                        class="icon-white ms-2"
-                        src="../assets/icons/search-user.svg"
-                        alt=""
-                      />
-                    </button>
+                    <img
+                      class="me-lg-1_25r ranking-icon order-lg-1"
+                      src="../assets/images/ranking_02.svg"
+                      alt="ranking"
+                    />
                   </div>
-                  <div class="marqee flex-grow-1">
+                  <div class="marqee flex-grow-1 order-lg-3">
                     <div class="marqee-container">
                       <div class="marqee-body">
                         <div class="marqee-title">
@@ -655,38 +658,40 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="custom-btn btn-primary mx-auto mx-lg-0 mt-3 mt-lg-0 order-lg-2 ms-lg-auto"
+                  >
+                    查看作者<img
+                      class="icon-white ms-2"
+                      src="../assets/icons/search-user.svg"
+                      alt=""
+                    />
+                  </button>
                 </div>
               </div>
               <div class="ranking">
                 <div class="ranking-img w-auto">
                   <img
-                    class="border-4 border-black border"
+                    class="border-4 border-black border w-100 w-lg-auto"
                     src="../assets/images/photo_陳志明.jpg"
                     alt="people"
                   />
                 </div>
-                <div class="ms-1_25r w-100 d-flex flex-column">
-                  <div class="ranking-title">
-                    <img
-                      class="me-1_25r ranking-icon"
-                      src="../assets/images/ranking_03.svg"
-                      alt="ranking"
-                    />
-                    <div>
+                <div
+                  class="ms-lg-1_25r w-100 d-flex flex-column flex-lg-row flex-wrap align-items-lg-center"
+                >
+                  <div class="ranking-title mb-3 mb-lg-0 order-lg-1">
+                    <div class="align-self-center order-lg-2 my-lg-4">
                       <h3 class="mb-1">陳志明</h3>
                       <small>3,567 人追蹤中</small>
                     </div>
-                    <button
-                      class="custom-btn custom-btn-lg btn-primary ms-auto"
-                    >
-                      查看作者<img
-                        class="icon-white ms-2"
-                        src="../assets/icons/search-user.svg"
-                        alt=""
-                      />
-                    </button>
+                    <img
+                      class="me-lg-1_25r ranking-icon order-lg-1"
+                      src="../assets/images/ranking_03.svg"
+                      alt="ranking"
+                    />
                   </div>
-                  <div class="marqee flex-grow-1">
+                  <div class="marqee flex-grow-1 order-lg-3">
                     <div class="marqee-container">
                       <div class="marqee-body">
                         <div class="marqee-title">
@@ -720,6 +725,15 @@
                       </div>
                     </div>
                   </div>
+                  <button
+                    class="custom-btn btn-primary mx-auto mx-lg-0 mt-3 mt-lg-0 order-lg-2 ms-lg-auto"
+                  >
+                    查看作者<img
+                      class="icon-white ms-2"
+                      src="../assets/icons/search-user.svg"
+                      alt=""
+                    />
+                  </button>
                 </div>
               </div>
             </div>
@@ -730,13 +744,13 @@
     <!-- 方案介紹 -->
     <section class="bg-blue-100">
       <div class="container">
-        <div class="pt-6r pb-9r">
-          <div class="label mx-auto mb-6r">
+        <div class="pt-lg-6r pb-lg-9r py-5">
+          <div class="label mx-auto mb-5 mb-lg-6r">
             <div class="label-icon bg-magenta"></div>
             <h2 class="label-title">方案介紹</h2>
           </div>
           <div class="row align-items-center">
-            <div class="col-4">
+            <div class="col-lg-4 mb-4 mb-lg-0">
               <div class="plan">
                 <div class="plan-body">
                   <div class="plan-title">
@@ -771,7 +785,7 @@
                       </li>
                     </ul>
                     <button
-                      class="custom-btn custom-btn-lg btn-primary w-100 mt-auto"
+                      class="custom-btn btn-primary w-100 mt-lg-auto mt-5"
                     >
                       我要使用免費版<img
                         class="icon-white ms-2"
@@ -783,7 +797,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 mb-4 mb-lg-0">
               <div class="plan">
                 <div class="plan-body">
                   <div class="plan-title">
@@ -827,7 +841,7 @@
                       </li>
                     </ul>
                     <button
-                      class="custom-btn custom-btn-lg btn-primary w-100 mt-auto"
+                      class="custom-btn btn-primary w-100 mt-lg-auto mt-5"
                     >
                       我要使用月付費<img
                         class="icon-white ms-2"
@@ -839,7 +853,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="plan">
                 <div class="plan-body">
                   <div class="plan-title">
@@ -891,7 +905,7 @@
                       </li>
                     </ul>
                     <button
-                      class="custom-btn custom-btn-lg btn-primary w-100 mt-auto"
+                      class="custom-btn btn-primary w-100 mt-lg-auto mt-5"
                     >
                       我要使用年付費<img
                         class="icon-white ms-2"

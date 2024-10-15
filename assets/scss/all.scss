@@ -29,21 +29,39 @@
     transition: all 0.3s ease;
   }
 }
+h1 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 1.55rem;
+}
 @include media-breakpoint-up(lg) {
-  .w {
-    &-lg-auto {
+  .w-lg {
+    &-auto {
       width: auto !important;
+    }
+  }
+  .fs-lg {
+    &-4r {
+      font-size: 4rem;
+    }
+    &-1 {
+      font-size: 2.5rem;
+    }
+    &-6 {
+      font-size: 1rem;
     }
   }
 }
 // 四角有釘子的背景
 .bg-nail {
-  background-color: $blue-100;
-  border: 4px solid $blue-800;
-  box-shadow: 4px * -1 4px * -1 0px 0px #00000033 inset,
-    4px 4px 0px 0px #ffffff inset;
-  position: relative;
-
+  @include media-breakpoint-up(lg) {
+    background-color: $blue-100;
+    border: 4px solid $blue-800;
+    box-shadow: 4px * -1 4px * -1 0px 0px #00000033 inset,
+      4px 4px 0px 0px #ffffff inset;
+    position: relative;
+  }
   &-top {
     &::before {
       content: "";
@@ -86,5 +104,15 @@
       right: 1.75rem;
     }
   }
+}
+
+.custom-shadow-top-left-white {
+  box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset,
+    4px 4px 0px 0px #ffffff inset;
+}
+
+.custom-shadow-bottom-right-white {
+  box-shadow: -4px -4px 0px 0px #ffffff inset,
+    4px 4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset;
 }
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");

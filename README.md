@@ -43,22 +43,12 @@
 
 ### 👉🏻 左、左上為白色陰影，右、右下為黑色陰影
 
-```css
-.custom-shadow-top-left-white {
-  box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset, 4px 4px 0px
-      0px #ffffff inset;
-}
+```html
+<div class="custom-shadow-top-left-white"></div>
 ```
 
 ### 👉🏻 右、右下為白色陰影，左、左上為黑色陰影
 
-```css
-.custom-shadow-bottom-right-white {
-  box-shadow: -4px -4px 0px 0px #ffffff inset, 4px 4px 0px 0px rgba(
-        0,
-        0,
-        0,
-        0.2509803922
-      ) inset;
-}
+```html
+<div class="custom-shadow-bottom-right-white"></div>
 ```

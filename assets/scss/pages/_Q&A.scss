@@ -288,5 +288,12 @@
 
 
 
+.QAcontent {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
 
 

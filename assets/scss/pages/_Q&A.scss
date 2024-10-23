@@ -1,0 +1,292 @@
+.custom-btn{
+  width: 322px;
+  height: 64px;
+  clip-path: none;
+}
+
+.btn-dark {
+  width: 100%;
+  background: #212529;
+  color: $white;
+  border: #eff6fc;
+  box-shadow: 4px 4px 0px 0px #eff6fc inset;
+
+  &:hover {
+    background: $blue-800;
+    box-shadow: 4px 4px 0px 0px #474593 inset, -4px -4px 0px 0px #eff6fc inset;
+  }
+  // &:active {
+  //   background: $blue-800;
+  //   box-shadow: 4px 4px 0px 0px #474593 inset, -4px -4px 0px 0px #eff6fc inset;
+  // }
+  &.active {
+    background: $blue-800;
+    box-shadow: 4px 4px 0px 0px #474593 inset, -4px -4px 0px 0px #eff6fc inset;
+  }
+
+}
+
+.main-title{
+  padding: 96px 0px;
+}
+
+.main-content{
+  padding-bottom: 96px;
+}
+
+.boardA {
+  border: $board-border-size solid $blue-800;
+  height: 100%;
+  background-color: $white;
+  padding: 0 0;
+  display: flex;
+  flex-direction: column;
+
+  &-titleA {
+    font-weight: 500;
+    color: #ffffff;
+    background-color: $blue-800;
+
+
+    // border-bottom: $board-border-size solid $blue-800;
+    box-shadow: $board-border-size * -1 $board-border-size * -1 0px 0px
+        #00000033 inset,
+      $board-border-size $board-border-size 0px 0px #ffffff inset;
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+  }
+
+  &-content {
+    display: flex;
+    // align-items: center;
+    text-align: center;
+    //justify-content: center;
+    height: 100%;
+    padding: 2rem 0;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+
+
+    .accordion{
+
+      &-header{
+        background: $blue-200;
+      }
+    
+      &-button{
+        box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px #00000033 inset;
+        background: $blue-200;
+        font-size: medium;
+        font-weight: 500;
+    
+        // justify-content: flex-start;
+      }
+    
+      &-button:not(.collapsed) {
+        box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px #00000033 inset;
+        background: $blue-200;
+      }
+    
+      &-button::after {
+        display: none; /* 隱藏默認箭頭 */
+      }
+    
+      /* 閉合時的向下箭頭 */
+      &-button.collapsed::before {
+        content: ''; /* 移除原有 Font Awesome 的內容 */
+        display: inline-block;
+        width: 16px; /* 根據需要調整寬度 */
+        height: 16px; /* 根據需要調整高度 */
+        background-image: url('../assets/icons/chevron_right.svg');
+        background-size: contain; /* 確保圖標不會被拉伸變形 */
+        background-repeat: no-repeat;
+        // transform: rotate(0deg); /* 閉合狀態保持向右箭頭 */
+        margin-right: 10px; /* 調整箭頭和文本之間的間距 */
+      }
+    
+      /* 展開時的向上箭頭 */
+      &-button::before {
+        content: ''; /* 移除原有 Font Awesome 的內容 */
+        display: inline-block;
+        width: 16px; /* 根據需要調整寬度 */
+        height: 16px; /* 根據需要調整高度 */
+        background-image: url('../assets/icons/chevron_down.svg');
+        background-size: contain; /* 確保圖標不會被拉伸變形 */
+        background-repeat: no-repeat;
+        // transform: rotate(0deg); /* 閉合狀態保持向右箭頭 */
+        margin-right: 10px; /* 調整箭頭和文本之間的間距 */
+      }
+    
+      &-body{
+        background: #DCE9FB;
+        padding: 0 0;
+    
+        .side-menu {
+          box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px #00000033 inset;
+          background: #DCE9FB;
+          margin-bottom: 0px;
+          padding-left: 0px;
+          list-style: none;
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          // gap: 16px;
+        
+          li {
+            cursor: pointer;
+            padding-left: 60px;
+            padding-right: 24px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+    
+            p {
+              margin-bottom: 0px;
+            }
+          }
+    
+          li.active {
+            background: $white;
+            box-shadow: -4px -4px 0px 0px $gray-400 inset;
+          }
+        }
+      }
+    
+    }
+    .fixed-bg{
+      
+      max-width: 100%;
+      
+      background-color: $blue-100; /* 背景色設置 */
+      box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
+    }
+    /* 使 accordion 固定 */
+    .fixed-left {
+      width: 322px;
+      padding-top: 56px;
+      box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
+      position: fixed;
+      top: calc(45px + 1rem); /* 根據board-title的高度調整，64px 是假設的board-title高度，1rem 是標準邊距 */
+      // height: calc(100vh - (64px + 1rem)); /* 剩餘的可視高度 */
+      overflow-y: auto; /* 啟用垂直滾動 */
+      z-index: 1000; /* 確保它位於頂層 */
+      background-color: $blue-100; /* 背景色設置 */
+    }
+    .content-list {
+      padding: 64px 72px;
+      list-style: none;
+      text-align: left;
+    
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+    
+      li {
+        background: #fff;
+    
+        h4 {
+          margin-bottom: 16px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+    
+      li.active {
+        color: #fff;
+        background: $blue-400;
+        box-shadow: 4px 4px 0px 0px $blue-200 inset, -4px -4px 0px 0px #00000033 inset;
+      }
+      
+    
+    }
+
+  }
+
+  &-menu{
+    background-color: $blue-100;
+    box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
+    padding: 56px 0 ;
+  }
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+  }
+
+  &-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include media-breakpoint-up(lg) {
+    // padding: 0.75rem;
+
+    // &::after {
+    //   position: absolute;
+    //   background-image: url("../images/Sparkle-1.svg");
+    //   background-size: cover;
+    //   margin: 0 20px 20px 0;
+    //   width: 96px;
+    //   height: 80px;
+    //   bottom: 0;
+    //   right: 0;
+    //   content: "";
+    // }
+    &-title {
+      border: $board-border-size solid $blue-800;
+      // &::after {
+      //   right: 0.75rem;
+      //   top: 0.75rem;
+      //   position: absolute;
+      //   content: "";
+      //   display: block;
+      //   background-position: center;
+      //   background-repeat: space;
+      //   width: 92px;
+      //   height: 29px;
+      //   background-image: url("../images/circle_button.svg");
+      // }
+    }
+    &-img {
+      height: 100%;
+    }
+    &-content {
+      padding: 0;
+      flex-direction: row;
+      width: 100%;
+      margin: 0;
+    }
+    &-box {
+      display: inline-block;
+      width: 10rem;
+      justify-content: center;
+    }
+    &-icon {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+

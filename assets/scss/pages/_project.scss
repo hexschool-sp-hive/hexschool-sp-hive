@@ -36,3 +36,52 @@
     background-color: $primary;
   }
 }
+
+.author {
+  padding: 1.5rem 2rem;
+  &-img {
+    max-width: 120px;
+    max-height: 120px;
+    background-image: url("../images/photo_bg.jpg");
+    padding: 0.5rem;
+    display: inline-block;
+    background-size: cover;
+    box-shadow: -4px -4px 0px 0px #ffffff inset,
+      4px 4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  }
+  &-number {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    &-name {
+      font-size: 0.875rem;
+      color: $gray-700;
+    }
+  }
+  &-border {
+    border-bottom: 2px solid white;
+    box-shadow: 0px -2px 0px 0px $blue-300 inset;
+  }
+  &-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+  &-intro {
+    color: $gray-700;
+  }
+  &-link {
+    color: $blue-600;
+    text-decoration: none;
+    &:hover {
+      color: $blue-700;
+    }
+    &-title {
+      font-weight: 500;
+    }
+    &-img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -85,3 +85,34 @@
     }
   }
 }
+
+.content {
+  padding: 2rem;
+  &-title {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    &-name {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    &-time {
+      color: $gray-500;
+      font-size: 0.875rem;
+    }
+  }
+  &-body {
+    margin-bottom: 1rem;
+  }
+  &-intro {
+    margin-bottom: 3rem;
+    &-title {
+     font-weight: 500;
+     margin-bottom: 1rem;
+    }
+    &-text {
+      color: $gray-700;
+    }
+  }
+}

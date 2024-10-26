@@ -10,3 +10,29 @@
     height: 24px;
   }
 }
+
+.info {
+  &-body {
+    background-color: white;
+    padding: 2rem;
+  }
+  &-shadow {
+    box-shadow: 4px 4px 0px 0px #FFFFFF inset;
+    box-shadow: -4px -4px 0px 0px #00000033 inset;
+  }
+}
+
+.dot {
+  width: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-body {
+    width: 12px;
+    height: 12px;
+    background-color: $gray-300;
+  }
+  &-active {
+    background-color: $primary;
+  }
+}

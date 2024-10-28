@@ -1,0 +1,25 @@
+
+.comment {
+  &-input {
+    border: none;
+    width: 100%;
+    padding: 1.25rem;
+      box-shadow: 4px 4px 0px 0px #00000040 inset,
+        -4px -4px 0px 0px #FFFFFF inset;
+    &:active {
+      box-shadow: 4px 4px 0px 0px #00000040 inset,
+        -4px -4px 0px 0px #FFFFFF inset,
+        0px 0px 0px 4px #6295F5;
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 4px 4px 0px 0px #00000040 inset,
+        -4px -4px 0px 0px #FFFFFF inset,
+        0px 0px 0px 4px #6295F5;
+    }
+  }
+  &-border {
+    border-bottom: 2px solid white;
+    box-shadow: 0px -2px 0px 0px $blue-300 inset;
+  }
+}

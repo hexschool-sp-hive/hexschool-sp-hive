@@ -17,8 +17,8 @@
     padding: 2rem;
   }
   &-shadow {
-    box-shadow: 4px 4px 0px 0px #FFFFFF inset;
-    box-shadow: -4px -4px 0px 0px #00000033 inset;
+    box-shadow: 4px 4px 0px 0px #FFFFFF inset,
+      -4px -4px 0px 0px #00000033 inset;
   }
 }
 

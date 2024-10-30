@@ -1,6 +1,17 @@
 $board-border-size: 4px;
+.banner {
+  background-image: url("../assets/images/banner_bg_mobile.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  height: 667px;
+  @include media-breakpoint-up(lg) {
+    background-image: url("../assets/images/banner_bg_desktop.jpg");
+    background-position: 30%;
+    height: 720px;
+  }
+}
+
 .board {
-  padding: 0.75rem;
   border: $board-border-size solid $blue-800;
   height: 100%;
   background-color: $white;
@@ -12,7 +23,7 @@ $board-border-size: 4px;
   &-title {
     font-weight: 500;
     background-color: $blue-300;
-    border: $board-border-size solid $blue-800;
+    border-bottom: $board-border-size solid $blue-800;
     box-shadow: $board-border-size * -1 $board-border-size * -1 0px 0px
         #00000033 inset,
       $board-border-size $board-border-size 0px 0px #ffffff inset;
@@ -20,45 +31,84 @@ $board-border-size: 4px;
     display: flex;
     justify-content: center;
     position: relative;
-    &::after {
-      right: 0.75rem;
-      top: 0.75rem;
-      position: absolute;
-      content: "";
-      display: block;
-      background-position: center;
-      background-repeat: space;
-      width: 92px;
-      height: 29px;
-      background-image: url("../images/circle_button.svg");
-    }
   }
   &-content {
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
+    justify-content: center;
     height: 100%;
     gap: 1.5rem;
+    padding: 2rem 0;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
   }
   &-icon {
-    width: 72px;
-    height: 72px;
-    margin-bottom: 1rem;
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
   }
   &-box {
-    width: 10rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
-  &::after {
-    position: absolute;
-    background-image: url("../images/Sparkle-1.svg");
-    background-size: cover;
-    margin: 0 20px 20px 0;
-    width: 96px;
-    height: 80px;
-    bottom: 0;
-    right: 0;
-    content: "";
+
+  &-img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0.75rem;
+    &::after {
+      position: absolute;
+      background-image: url("../images/Sparkle-1.svg");
+      background-size: cover;
+      margin: 0 20px 20px 0;
+      width: 96px;
+      height: 80px;
+      bottom: 0;
+      right: 0;
+      content: "";
+    }
+    &-title {
+      border: $board-border-size solid $blue-800;
+      &::after {
+        right: 0.75rem;
+        top: 0.75rem;
+        position: absolute;
+        content: "";
+        display: block;
+        background-position: center;
+        background-repeat: space;
+        width: 92px;
+        height: 29px;
+        background-image: url("../images/circle_button.svg");
+      }
+    }
+    &-img {
+      height: 100%;
+    }
+    &-content {
+      padding: 0;
+      flex-direction: row;
+      width: 100%;
+      margin: 0;
+    }
+    &-box {
+      display: inline-block;
+      width: 10rem;
+      justify-content: center;
+    }
+    &-icon {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
   }
 }
 
@@ -84,6 +134,11 @@ $board-border-size: 4px;
     min-height: 94px;
     transform: rotateX(180deg);
   }
+  @include media-breakpoint-up(lg) {
+    &::before {
+      min-height: 81px;
+    }
+  }
 }
 
 .ranking {
@@ -91,25 +146,46 @@ $board-border-size: 4px;
   box-shadow: $board-border-size * -1 $board-border-size * -1 0px 0px #00000033
       inset,
     $board-border-size $board-border-size 0px 0px #ffffff inset;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
+  flex-direction: column;
   &-img {
     background-image: url("../images/photo_bg.jpg");
-    padding: 42px;
+    padding: 49px;
     display: inline-block;
+    background-size: cover;
     box-shadow: -4px -4px 0px 0px #ffffff inset,
       4px 4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset;
   }
   &-title {
     display: flex;
     align-items: start;
-    padding: 1.25rem 0 1.25rem 5.25rem;
-    position: relative;
+    justify-content: space-between;
+    // padding: 1.25rem 0 1.25rem 5.25rem;
+    // position: relative;
   }
-  &-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &-btn {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+  }
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    padding: 1.5rem;
+    &-img {
+      padding: 42px;
+    }
+    &-title {
+      justify-content: start;
+
+      // padding: 1.25rem 0 1.25rem 5.25rem;
+      // position: relative;
+    }
+    &-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
@@ -117,7 +193,7 @@ $board-border-size: 4px;
   background-color: $blue-100;
   box-shadow: -4px -4px 0px 0px #ffffff inset,
     4px 4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset;
-  padding: 1.5rem 2rem 0 2rem;
+  padding: 1rem 1rem 0 1rem;
   overflow: hidden;
   height: 159px;
   &-container {
@@ -141,6 +217,9 @@ $board-border-size: 4px;
     border-radius: 50%;
     object-fit: cover;
   }
+  @include media-breakpoint-up(lg) {
+    padding: 1.5rem 2rem 0 2rem;
+  }
 }
 
 @keyframes marquee {
@@ -153,7 +232,6 @@ $board-border-size: 4px;
 }
 
 .plan {
-  padding: 3rem 0;
   &-title {
     display: flex;
     padding: 2rem;
@@ -173,8 +251,6 @@ $board-border-size: 4px;
     box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.2509803922) inset,
       4px 4px 0px 0px #ffffff inset;
     padding: 2rem;
-    min-height: 306px;
-    // height: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -183,15 +259,21 @@ $board-border-size: 4px;
     height: 1.5rem;
   }
 
-  &:hover {
-    padding: 0;
-    .plan {
-      &-title {
-        background-color: $blue-800;
-        color: $white;
-      }
-      &-content {
-        min-height: 382px;
+  @include media-breakpoint-up(lg) {
+    padding: 3rem 0;
+    &-content {
+      min-height: 306px;
+    }
+    &:hover {
+      padding: 0;
+      .plan {
+        &-title {
+          background-color: $blue-800;
+          color: $white;
+        }
+        &-content {
+          min-height: 382px;
+        }
       }
     }
   }

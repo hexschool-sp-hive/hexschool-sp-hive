@@ -27,7 +27,17 @@
 }
 
 .main-title{
-  padding: 96px 0px;
+  padding: 28px 0px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 96px 0px;
+  }
+  // padding: 96px 0px;
+
+  // @media(max-width: 992px){
+  //   padding: 28px 0px;
+  // }
+  
 }
 
 .main-content{
@@ -70,8 +80,27 @@
     width: fit-content;
     margin: 0 auto;
 
+    @media(max-width: 992px){
+      width: 100%;
+      padding: 0 0;
+      margin: 0 0;
+    }
+  
+    
 
     .accordion{
+
+      width: 100%;
+      padding: 56px 0;
+
+      @media(max-width: 992px){
+        width: 100%;
+        padding: 0 0;
+      }
+      @media(max-width: 576px){
+        width: 100%;
+        padding: 0 0;
+      }
 
       &-header{
         background: $blue-200;
@@ -85,16 +114,13 @@
     
         // justify-content: flex-start;
       }
-    
       &-button:not(.collapsed) {
         box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px #00000033 inset;
         background: $blue-200;
       }
-    
       &-button::after {
         display: none; /* 隱藏默認箭頭 */
       }
-    
       /* 閉合時的向下箭頭 */
       &-button.collapsed::before {
         content: ''; /* 移除原有 Font Awesome 的內容 */
@@ -107,7 +133,6 @@
         // transform: rotate(0deg); /* 閉合狀態保持向右箭頭 */
         margin-right: 10px; /* 調整箭頭和文本之間的間距 */
       }
-    
       /* 展開時的向上箭頭 */
       &-button::before {
         content: ''; /* 移除原有 Font Awesome 的內容 */
@@ -135,6 +160,28 @@
           display: flex;
           flex-direction: column;
           // gap: 16px;
+          @media(max-width: 992px){
+            background: #ffffff;
+          }
+          // @media(max-width: 576px){
+          //   width: 100%;
+          //   padding: 0 0;
+          // }
+          
+
+          .menucontent{
+            display: none;
+            @media(max-width: 992px){
+              display: inline-block;
+            }
+          }
+
+          .menucontent-lg{
+            display: inline-block;
+            @media(max-width: 992px){
+              display: none;
+            }
+          }
         
           li {
             cursor: pointer;
@@ -157,24 +204,30 @@
     
     }
     .fixed-bg{
-      
       max-width: 100%;
-      
       background-color: $blue-100; /* 背景色設置 */
       box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
+
+      // @media(max-width: 992px){
+      //   max-width: 100%;
+      // }
+      // @media(max-width: 576px){
+      //   max-width: 100%;
+      // }
+
     }
     /* 使 accordion 固定 */
-    .fixed-left {
-      width: 322px;
-      padding-top: 56px;
-      box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
-      position: fixed;
-      top: calc(45px + 1rem); /* 根據board-title的高度調整，64px 是假設的board-title高度，1rem 是標準邊距 */
-      // height: calc(100vh - (64px + 1rem)); /* 剩餘的可視高度 */
-      overflow-y: auto; /* 啟用垂直滾動 */
-      z-index: 1000; /* 確保它位於頂層 */
-      background-color: $blue-100; /* 背景色設置 */
-    }
+    // .fixed-left {
+    //   width: 322px;
+    //   padding-top: 56px;
+    //   box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
+    //   position: fixed;
+    //   top: calc(45px + 1rem); /* 根據board-title的高度調整，64px 是假設的board-title高度，1rem 是標準邊距 */
+    //   overflow-y: auto; /* 啟用垂直滾動 */
+    //   z-index: 1000; /* 確保它位於頂層 */
+    //   background-color: $blue-100; /* 背景色設置 */
+    // }
+
     .content-list {
       padding: 64px 72px;
       list-style: none;
@@ -203,6 +256,15 @@
       
     
     }
+
+    .fixed-content{
+      display: inline-block;
+
+      @media(max-width: 992px){
+        display: none;
+      }
+    }
+
 
   }
 
@@ -273,12 +335,17 @@
       width: 10rem;
       justify-content: center;
     }
+
     &-icon {
       width: 72px;
       height: 72px;
       margin-bottom: 1rem;
       margin-right: 0;
     }
+
+
+   
+    
   }
 
 }

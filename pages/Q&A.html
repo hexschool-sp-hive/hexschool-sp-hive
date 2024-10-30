@@ -7,30 +7,29 @@
 </head>
 <body>
   <%- include('./layout/header'); -%>
-
   <!-- 關於 SP HIVE -->
   <section class="bg-blue-100">
     <div class="container">
 
       <div class="col-lg-12 main-title" data-aos="fade-left">
         <div class="boardA">
-          <div class="d-flex">
-            <div class="col-lg-3">
+          <div class="d-flex flex-wrap">
+            <div class="col-lg-3 col-6">
               <button class="custom-btn btn-dark">
                 我的帳戶
               </button>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-6">
               <button class="custom-btn btn-dark">
                 訂閱方案
               </button>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-6">
               <button class="btn custom-btn btn-dark active">
                 訂閱Q&A
               </button>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-6">
               <button class="custom-btn btn-dark">
                 付款紀錄
               </button>
@@ -41,22 +40,13 @@
 
       <div class="col-lg-12 main-content" data-aos="fade-left">
         <div class="boardA">
-
-
           <div class="boardA-titleA">
             <h4 class="mb-0">訂閱Q&A</h4>
           </div>
-
-          
-          
           <div class="boardA-content">
-
-            
-            
-            <div class="col-lg-3 fixed-bg">
-              
-              <div class="accordion fixed-left" id="accordionExample">
-
+            <div class="col-lg-3 col-12 fixed-bg">
+              <!-- <div class="accordion fixed-left" id="accordionExample"></div> -->
+              <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -68,17 +58,35 @@
                       
                       <ul class="side-menu free">
                         <li data-target="free-1">
-                          <p>免費試用方案提供哪些功能？</p>
+                          <div class="menucontent-lg">
+                            <p>免費試用方案提供哪些功能？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>免費試用方案提供哪些功能？</h4>
+                            <p>免費試用方案允許用戶體驗我們的基本功能，每月可以上傳作品與圖片，具體限制如下：
+                              上傳作品數量：每月最多3個作品。
+                              圖片上傳限制：每個作品最多可以上傳1張圖片。
+                              影片上傳：免費試用方案不支援影片上傳。
+                              免費試用方案適合那些剛開始使用平台、希望先探索基本功能的用戶。
+                              如果您希望享受更多功能和擴展上傳限制，可以隨時升級至付費方案。</p>
+                          </div>
                         </li>
                         <li data-target="free-2">
-                          <p>免費試用有時間限制嗎？</p>
+                          <!-- <p>免費試用有時間限制嗎？</p> -->
+                          <div class="menucontent-lg">
+                            <p>免費試用有時間限制嗎？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>免費試用有時間限制嗎？</h4>
+                            <p>免費試用沒有固定的時間限制，您可以持續使用免費方案，不過每月的上傳配額會重置，
+                              保持在3個作品和1張圖片的上限。如果您需要更多功能，隨時可以升級至付費方案。</p>
+                          </div>
                         </li>
                       </ul>
 
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -87,27 +95,48 @@
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      
                       <ul class="side-menu renew">
                         <li data-target="content-1">
-                          <p>我想更改我的方案</p>
+                          <div class="menucontent-lg">
+                            <p>我想更改我的方案</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>我想更改我的方案</h4>
+                            <p>沒問題！ 如果您通過信用卡訂閱，您可以通過我們的網站在“訂閱方案”部分更改計劃並選擇新訂閱方案。</p>
+                          </div>
                         </li>
                         <li data-target="content-2">
-                          <p>我不想自動續訂</p>
+                          <div class="menucontent-lg">
+                            <p>我不想自動續訂</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>我不想自動續訂</h4>
+                            <p>沒問題！您可以在訂閱設定中關閉自動續訂，這樣在目前訂閱週期結束後將不會再自動扣款。</p>
+                          </div>
                         </li>
                         <li data-target="content-3">
-                          <p>變更訂閱方案會有額外的手續費嗎？</p>
+                          <div class="menucontent-lg">
+                            <p>變更訂閱方案會有額外的手續費嗎？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>變更訂閱方案會有額外的手續費嗎？</h4>
+                            <p>通常不會收取額外的手續費，但在降級或升級時可能需要支付或退回差額。</p>
+                          </div>
                         </li>
                         <li data-target="content-4">
-                          <p>升級方案後，功能會立即生效嗎？</p>
+                          <div class="menucontent-lg">
+                            <p>升級方案後，功能會立即生效嗎？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>升級方案後，功能會立即生效嗎？</h4>
+                            <p>是的，升級到高級方案後，高級功能會立即解鎖，您可以立即使用這些功能。</p>
+                          </div>
                         </li>
                         
                       </ul>  
-            
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -116,36 +145,61 @@
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-
                       <ul class="side-menu refund">
 
                         <li data-target="refund-1">
-                          <p>訂閱服務退費政策是什麼？</p>
+                          <div class="menucontent-lg">
+                            <p>訂閱服務退費政策是什麼？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>訂閱服務退費政策是什麼？</h4>
+                            <p>訂閱服務退費適用於您更改方案後的差額退還。
+                              如果您在訂閱周期內從較高費用的方案（如年費）切換至較低費用的方案（如月費或免費），
+                              我們將按比例退還剩餘的訂閱費用。請注意，切換後新的上傳配額將立即生效，
+                              並根據新方案的上傳限制進行管理。</p>
+                          </div>
                         </li>
                         <li data-target="refund-2">
-                          <p>如果我不再需要高級功能，可以降級至免費方案嗎？</p>
+                          <div class="menucontent-lg">
+                            <p>如果我不再需要高級功能，可以降級至免費方案嗎？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>如果我不再需要高級功能，可以降級至免費方案嗎？</h4>
+                            <p>是的，您可以隨時將訂閱降級至免費方案。降級後，當月已上傳的作品將保持可見，
+                              但未來上傳的作品將受限於免費方案的配額（每月最多上傳3個作品，
+                              且每個作品只能包含1張圖片）。如有任何未使用的訂閱費，我們將按比例退還。</p>
+                          </div>
                         </li>
                         <li data-target="refund-3">
-                          <p>我更改訂閱方案後，可以獲得差額退費嗎？</p>
+                          <div class="menucontent-lg">
+                            <p>我更改訂閱方案後，可以獲得差額退費嗎？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>我更改訂閱方案後，可以獲得差額退費嗎？</h4>
+                            <p>訂閱費用通常在您選擇方案後立即生效，
+                              因此我們不提供完整的訂閱退款服務。然而，如果您在訂閱過程中遇到技術問題或其他特殊情況，
+                              請聯繫我們的客服，我們將根據具體情況提供部分退費或解決方案。</p>
+                          </div>
                         </li>
                         <li data-target="refund-4">
-                          <p>更改方案後，退費如何處理？</p>
+                          <div class="menucontent-lg">
+                            <p>更改方案後，退費如何處理？</p>
+                          </div>
+                          <div class="menucontent">
+                            <h4>更改方案後，退費如何處理？</h4>
+                            <p>當您從較高費用的訂閱方案（如年費）切換至較低費用的方案（如月費），
+                              我們會按比例退還剩餘未使用的費用。退費將退回至您原始付款方式，
+                              處理時間為7至10個工作日。請注意，退費金額會根據您已使用的訂閱時間進行調整。</p>
+                          </div>
                         </li>
                         
                       </ul>
-
-
                     </div>
                   </div>
                 </div>
-
               </div>
-
-
-              
             </div>
-
-            <div class="col-lg-9">
+            <div class="col-lg-9 col-12 fixed-content">
               <div class="d-flex flex-column">
 
                 <div id="free" class="QAcontent">
@@ -164,7 +218,6 @@
                     </li>                    
                   </ul>
                 </div>
-
                 <div id="renew" class="QAcontent active">
                   <ul class="content-list renew-list">
                     <li id="content-1">
@@ -187,7 +240,6 @@
                     
                   </ul>
                 </div>
-
                 <div id="refund" class="QAcontent">
                   <ul class="content-list refund-list">
                     <li id="refund-1">
@@ -211,24 +263,16 @@
 
               </div>
             </div>
-
-
-
           </div>
-
-
-
         </div>
       </div>
-
-
 
     </div>
   </section>
 
   <%- include('./layout/footer'); -%>
-  <script type="module" src="../main.js"></script>
 
+  <script type="module" src="../main.js"></script>
   <script type="text/javascript">
 
     // 監聽 accordion 切換事件，並顯示對應的 QAcontent
@@ -262,8 +306,6 @@
       menuItem.addEventListener('click', function() {
         // 移除其他選單項的 active 樣式
         document.querySelectorAll('.renew li').forEach(li => li.classList.remove('active'));
-    
-        console.log('this.classList',this.classList )
         // 為當前選中的選單項目添加 active 樣式
         this.classList.add('active');
     
@@ -324,8 +366,6 @@
 
 
   </script>
-
-
 
 </body>
 </html>

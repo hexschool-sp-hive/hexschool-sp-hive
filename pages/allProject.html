@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layout/head', {page:'所有作品展示頁'}); -%>
+  <body>
+    <%- include('./layout/header'); -%>
+    <!-- Top10 header -->
+    <section class="bg-blue-200"
+      style="
+        /* background-image: url('../assets/images/banner_bg_desktop.jpg');
+        background-size: cover;
+        background-position: 30%; */
+        height: 790px;
+      "
+    >
+      <!-- <div class="container h-100"> -->
+        <div
+          class="d-flex pt-6r pb-6r mt-3_5r mt-lg-0 align-items-center"
+        >
+          <div class="label mx-auto">
+              <div class="label-icon bg-danger"></div>
+              <h2 class="label-title">Top 10 熱門專案</h2>
+          </div>
+        </div>
+        <div class="container position-relative">
+          <button class="top10-card-btn top10-card-btn-lg position-absolute top-50 end-100 translate-middle-y me-5">
+            <img
+            class=""
+            src="../assets/icons/arrow_left.svg"
+            alt="left"
+          /></button>
+          <div class="d-flex row top10-card overflow-hidden">
+            <div class="col-5 position-relative">
+              <div class="top10-card-element">
+                <div class="d-flex">               
+                  <img
+                  class="top10-card-avatar"
+                  src="../assets/images/project_cover_01.jpg"
+                  alt="top1"
+                  />
+                  <div class="col">
+                    <div class="top10-card-body">
+                      <div class="top10-card-title">射擊遊戲</div>
+                        <div class="top10-card-author d-flex justify-content-lg-start align-items-center">
+                          <img 
+                          class=""
+                          src="../assets/images/avatar_王大明.jpg"
+                          alt="icon"
+                          />王大明</div>
+                      <div class="top10-card-footer">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="../assets/icons/social-rewards-heart-like-circle.svg"
+                            alt="heart"
+                          />
+                          <p class="mb-0">1000</p>
+                        </div>
+                        <div class="d-flex align-items-center ms-1_25r">
+                          <img
+                            src="../assets/icons/social-rewards-certified-ribbon.svg"
+                            alt="ribbon"
+                          />
+                          <p class="mb-0">1000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="top10-card-ranking position-absolute bottom-0 start-0">Top 1</div>
+              </div>
+            </div>
+            <div class="col-5 position-relative">
+              <div class="top10-card-element">
+                <div class="d-flex">               
+                  <img
+                  class="top10-card-avatar"
+                  src="../assets/images/project_cover_07.jpg"
+                  alt="top1"
+                  />
+                  <div class="col">
+                    <div class="top10-card-body">
+                      <div class="top10-card-title">VR 教育模擬器</div>
+                        <div class="top10-card-author d-flex justify-content-lg-start align-items-center">
+                          <img 
+                          class=""
+                          src="../assets/images/avatar_陳佩琪.jpg"
+                          alt="icon"
+                          />陳佩琪</div>
+                      <div class="top10-card-footer">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="../assets/icons/social-rewards-heart-like-circle.svg"
+                            alt="heart"
+                          />
+                          <p class="mb-0">1000</p>
+                        </div>
+                        <div class="d-flex align-items-center ms-1_25r">
+                          <img
+                            src="../assets/icons/social-rewards-certified-ribbon.svg"
+                            alt="ribbon"
+                          />
+                          <p class="mb-0">1000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="top10-card-ranking position-absolute bottom-0 start-0">Top 2</div>
+              </div>
+            </div>
+            <div class="col-5 position-relative">
+              <div class="top10-card-element">
+                <div class="d-flex">               
+                  <img
+                  class="top10-card-avatar"
+                  src="../assets/images/project_cover_08.jpg"
+                  alt="top1"
+                  />
+                  <div class="col">
+                    <div class="top10-card-body">
+                      <div class="top10-card-title">AI圖像辨識</div>
+                        <div class="top10-card-author d-flex justify-content-lg-start align-items-center">
+                          <img 
+                          class=""
+                          src="../assets/images/avatar_陳佩琪.jpg"
+                          alt="icon"
+                          />陳佩琪</div>
+                      <div class="top10-card-footer">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="../assets/icons/social-rewards-heart-like-circle.svg"
+                            alt="heart"
+                          />
+                          <p class="mb-0">1000</p>
+                        </div>
+                        <div class="d-flex align-items-center ms-1_25r">
+                          <img
+                            src="../assets/icons/social-rewards-certified-ribbon.svg"
+                            alt="ribbon"
+                          />
+                          <p class="mb-0">1000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="top10-card-ranking position-absolute bottom-0 start-0">Top 3</div>
+              </div>
+            </div>
+          </div>
+          <button class="top10-card-btn top10-card-btn-lg position-absolute top-50 start-100 translate-middle-y ms-5">
+            <img
+            class=""
+            src="../assets/icons/arrow_right.svg"
+            alt=""
+          /></button>
+        </div>
+        <div class="mt-6r text-center">
+          <img 
+          class="mx-auto"
+          src="../assets/images/Like.png"
+          alt="icon"
+          />
+        </div>
+      <!-- </div> -->
+    </section>
+    <section class="bg-blue-50"
+      style="
+        height: 3324px;
+      "
+    >
+    <div class="container h-100">
+      <div class="allProject">
+        <div
+          class="allProject-title d-flex mt-3_5r mt-lg-0 me-lg-0 align-items-center "
+        >
+          <h2 class="">全部商品</h2>
+          <div class="searchBar position-relative ms-auto img-shadow">
+            <img 
+            class="position-absolute gray"
+            src="../assets/icons/interface-essential-search-1.svg"
+            alt="icon"
+            />
+            <input class="searchBar-text" placeholder="輸入搜尋關鍵字">
+          </div>
+        </div>
+        <div>
+        <div class="d-flex allProject-tagElement">
+          <div class="col">
+            <div class="mb-4 mt-auto">
+              <span class="tag allProject-element me-2">全部</span>
+              <span class="tag allProject-element me-2">java</span>
+              <span class="tag allProject-element me-2">unity</span>
+              <span class="tag allProject-element me-2">python</span>
+              <span class="tag allProject-element me-2">C++</span>
+              <span class="tag allProject-element me-2">遊戲</span>
+              <span class="tag allProject-element me-2">IDE</span>
+              <span class="tag allProject-element me-2">C#</span>
+              <span class="tag allProject-element me-2">即時聊天</span>
+              <span class="tag allProject-element me-2">生產力</span>
+              <span class="tag allProject-element me-2">nodejs</span>
+            </div>
+            <div class="mb-4 mt-auto">
+              <span class="tag allProject-element me-2">虛擬實境</span>
+              <span class="tag allProject-element me-2">物聯網</span>
+            </div>
+          </div>
+          <div class="d-flex">
+            <span class="allProject-dropdown">依留言數排序</span>
+            <div class="dropdown">
+              <div class="allProject-dropdown" data-bs-toggle="dropdown" type="button">
+                <img 
+                class=""
+                src="../assets/icons/interface-essential-setting-slide.svg"
+                alt="icon"
+                />
+              </div>  
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="btnGroupDrop1">
+                <li><h4 class="dropdown-header">排序依據</h4></li>
+                <li><a class="dropdown-item"><input type="checkbox"/> 依發佈時間排序</a></li>
+                <li><a class="dropdown-item"><input type="checkbox"/> 依加入最愛數排序</a></li>
+                <li><a class="dropdown-item"><input type="checkbox"/> 依收藏數排序</a></li>
+                <li><a class="dropdown-item"><input type="checkbox"/> 依留言數排序</a></li>
+                <li><h4 class="dropdown-header">順序</h4></li>
+                <li><a class="dropdown-item"><input type="checkbox"/> 由最多到最少</a></li>
+                <li><a class="dropdown-item"><input type="checkbox"/> 由最少到最多</a></li>
+              </ul>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row gy-4_5r">
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_01.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_王大明.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">王大明</p>
+                </div>
+
+                <p class="mb-4">
+                  遊戲中採用了最新的圖形渲染技術，實現了高質量的視覺效果和真實的光影效果。結合高保真的音效處理，營造出身臨其境的戰鬥氛圍，讓每一次射...
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">java</span>
+                  <span class="tag me-2">unity</span>
+                  <span class="tag">射擊</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_02.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_陳志明.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">陳志明</p>
+                </div>
+
+                <p class="mb-4">
+                  這款程式設計工具提供了強大的代碼自動完成和錯誤檢查功能。結合智能提示系統，開發者能夠快速編寫高效且無錯誤的代碼，提升開發效率。
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">java</span>
+                  <span class="tag me-2">IDE</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_03.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_李靜雯.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">李靜雯</p>
+                </div>
+
+                <p class="mb-4">
+                  新推出的手機APP專注於健康管理，結合了實時心率監測和個性化健身建議。通過精確的數據分析，幫助用戶達到最佳健康狀態。
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">swift</span>
+                  <span class="tag me-2">健康管理</span>
+                  <span class="tag">心律偵測</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_09.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_趙青山.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">陳大方</p>
+                </div>
+
+                <p class="mb-4">
+                  利用物聯網技術實現全屋智能化控制，無論是燈光、溫度還是家電，都能通過一個應用輕鬆管理。結合語音助理，讓你用語音指令就能實現舒適的生活體驗。
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">物聯網</span>
+                  <span class="tag me-2">居家</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_05.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_張志宏.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">張柏翰</p>
+                </div>
+
+                <p class="mb-4">
+                  透過區塊鏈技術提供安全且透明的合約管理解決方案，保證數據不可篡改性。支持多種智能合約範本，適合金融、法律等行業使用，讓合約管理變得更簡...
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">區塊鏈</span>
+                  <span class="tag me-2">IDE</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_07.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_陳佩琪.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">劉欣怡</p>
+                </div>
+
+                <p class="mb-4">
+                  開發基於虛擬現實技術的教育模擬平台，學生可以在虛擬環境中進行實驗操作和場景學習。結合沉浸式教學內容，讓學習過程更加生動有趣，提升學習效果。
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">swift</span>
+                  <span class="tag me-2">虛擬</span>
+                  <span class="tag">教育</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_10.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_趙青山.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">周建宇</p>
+                </div>
+
+                <p class="mb-4">
+                  這個項目基於最新的深度學習技術，能夠精準識別圖像中的物體與場景，並提供即時的分析結果。適用於安防、醫療影像分析等多個領域，大幅提升識別效...
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">nodejs</span>
+                  <span class="tag me-2">AI</span>
+                  <span class="tag">醫療影像</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_11.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_張志宏.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">黃俊傑</p>
+                </div>
+
+                <p class="mb-4">
+                  這款應用能即時將語音內容轉換成精準的文字，並進行自動整理與關鍵字標註。無論是會議記錄還是學術討論，都能大幅提升筆記的效率與準確性。
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">security</span>
+                  <span class="tag me-2">即時語音</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_12.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_王大明.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">許家豪</p>
+                </div>
+
+                <p class="mb-4">
+                  基於自然語言處理技術，這款聊天機器人可以流暢地理解並回答用戶的問題，無論是日常對話還是專業領域的諮詢，都能給出準確的回應。支持多語言和上...
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">java</span>
+                  <span class="tag me-2">機器人</span>
+                  <span class="tag">生產力</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_13.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_李靜雯.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">吳淑芬</p>
+                </div>
+
+                <p class="mb-4">
+                  使用大數據分析與機器學習演算法，這個系統能根據用戶行為提供精準的內容推薦。無論是電商平台還是影音應用，都能根據個人喜好自動推薦商品或內容...
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">電商</span>
+                  <span class="tag me-2">WebSocket</span>
+                  <span class="tag">大數據</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_14.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_張志宏.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">李宗翰</p>
+                </div>
+
+                <p class="mb-4">
+                  透過簡單的拖放操作，這個工具能將複雜的業務流程自動化，減少重複性工作。支持跨平台整合，幫助企業快速部署並優化流程，節省大量時間與成本。
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">跨平台整合</span>
+                  <span class="tag me-2">自動化</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="custom-card">
+            <h5 class="custom-card-title">專案名稱</h5>
+            <div class="custom-card-body">
+              <div class="custom-card-content">
+                <div class="img-shadow mb-3 animation-box">
+                  <img
+                    class="img-fluid img-scale animation-transition"
+                    src="../assets/images/project_cover_15.jpg"
+                    alt="project"
+                  />
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    class="custom-card-avatar"
+                    src="../assets/images/avatar_陳佩琪.jpg"
+                    alt="avatar"
+                  />
+                  <p class="mb-0 ms-0_75r fs-5 fw-medium">陳美玲</p>
+                </div>
+
+                <p class="mb-4">
+                  一款支持多人實時協作的虛擬白板，適合遠端團隊討論、頭腦風暴及方案演示。內建畫筆、圖形、文件共享功能，結合即時同步，讓每個團隊成員無論身處...
+                </p>
+                <div class="mb-4 mt-auto">
+                  <span class="tag me-2">遠端</span>
+                  <span class="tag me-2">實時協作</span>
+                  <span class="tag">生產力</span>
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <div class="d-flex align-items-center me-3">
+                  <img
+                    src="../assets/icons/social-rewards-heart-like-circle.svg"
+                    alt="heart"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/icons/social-rewards-certified-ribbon.svg"
+                    alt="ribbon"
+                  />
+                  <p class="mb-0">1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-group allProject-pageButton">
+          <button type="button">
+            <img
+            src="../assets/icons/icon-chevrons-left.svg"
+            alt="left"
+          /></button></button>
+          <button type="button">1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">4</button>
+          <button type="button">5</button>
+          <button type="button">
+            <img
+            src="../assets/icons/icon-chevrons-right.svg"
+            alt="right"
+          /></button>
+        </div>
+      </div>
+    </section>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

@@ -2,18 +2,24 @@ $top10-border-size: 4px;
 $top10-padding-y: 1rem;
 $top10-padding-x: 2rem;
 $top10-margin-y: 1.5rem;
+.top10 {
+  height: 670px;
+  @include media-breakpoint-up(lg) {
+    height: 790px;
+  }
+}
+
 .top10-card {
   flex-wrap: nowrap;
+  overflow-x: auto;
     &-element{
       padding: 1rem;
-      margin-right: 24px;
       border: $top10-border-size solid $blue-800;
-      // width: 100%;
       // height: 100%;
       background-color: $white;
       position: relative;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       box-shadow: $top10-border-size * -1 $top10-border-size * -1 0px 0px #00000033
         inset;
     }
@@ -25,12 +31,15 @@ $top10-margin-y: 1.5rem;
     &-ranking {
       color: $white;
       font-size: $h6-font-size;
-      width: fit-content;
-      padding: $top10-padding-y $top10-padding-x;
+      padding: 14.5px 33px;
       background-color: $blue-900;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
     }
     &-body {
       padding: $spacer $spacer 0 $spacer * 1.25;
+      width: 100%;
     }
     &-title {
     font-size: $h4-font-size;
@@ -47,9 +56,8 @@ $top10-margin-y: 1.5rem;
         margin-right: 0.75rem;
         border-radius: 50%;
       }
-      }
+    }
     &-footer {
-      padding-top: $spacer * 1.5;
       display: flex;
       justify-content: start;
       padding-top: $top10-margin-y;
@@ -93,8 +101,58 @@ $top10-margin-y: 1.5rem;
         color: #ffffff;
         box-shadow: $top10-border-size * -1 $top10-border-size * -1 0px 0px $blue-800 inset;
       }
+    }
+    &-img {
+      width: 119px;
+      height: 209px;
+    }
+
+  @include media-breakpoint-down(lg) {
+    &-element{
+    padding: 0.75rem;
+    flex-direction: column;
+    width: fit-content;
+    }
+
+    &-body {
+      padding: 8px 0 0 0;
+      width: 100%;
+    }
+    
+    &-ranking{
+      font-size: $h6-font-size;
+      height: fit-content;
+      padding: 14.5px 33px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    &-img {
+      width: 73px;
+      height: 127px;
+    }    
+
+    &-author {
+      padding: $top10-padding-y 0 $top10-padding-y;
+    }
+
+    &-footer {
+      padding-top: $spacer * 1;
+      justify-content: end;
+    }
+
+    &-avatar {
+      width: 225px;
+      height: 162px;
+      object-fit: cover;
+    }
   }
 }
+
+// .top10-card::-webkit-scrollbar{
+//   display:none;
+// }
 
 .searchBar{
   width: 306px;
@@ -120,11 +178,14 @@ $top10-margin-y: 1.5rem;
     // margin: ;
     border-bottom: 2px solid $blue-300;
   }
-  &-tagElement{
+  &-head{
     padding: 1.5rem 0 6rem 0;
     border-top: 2px solid $white;
   }
   &-element{
+    display: inline-block;
+    padding: 4px 16px;
+    margin-bottom: 1rem;
     &:hover {
       background: $blue-700;
       border: 2px solid $blue-900;
@@ -134,6 +195,7 @@ $top10-margin-y: 1.5rem;
   &-dropdown{
     font-size: 16px;
     padding: 0;
+    padding-top: 0px;
     img{
       width: 20px;
       height: 20px;
@@ -156,23 +218,65 @@ $top10-margin-y: 1.5rem;
     }
   }
   &-dropdownElement{
-      padding: 0;
-      margin-right: 3px;
-      cursor: pointer;
-      input[type=checkbox] {
-          display: inline-block;
-          background-color: #aaa;
-          padding: 3px 6px;
-          border: 1px solid gray;
-          color: #444;
-          user-select: none; /* 防止文字被滑鼠選取反白 */
-      }
+    padding: 0;
+    margin-right: 3px;
+    cursor: pointer;
+    input[type=checkbox] {
+        display: inline-block;
+        background-color: #aaa;
+        padding: 3px 6px;
+        border: 1px solid gray;
+        color: #444;
+        user-select: none; /* 防止文字被滑鼠選取反白 */
+    }
 
-      input[type=checkbox]:checked {
-          color: yellow;
-          background-color: #444;
+    input[type=checkbox]:checked {
+        color: yellow;
+        background-color: #444;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &-title{
+      padding: 3rem 0 1.5rem 0;
+      border-bottom: 2px solid $blue-300;
+    }
+    &-head{
+      padding: 1.5rem 0;
+      border-top: 2px solid $white;
+    }
+    &-element{
+    font-size: 14px;
+    width: fit-content;
+    margin-bottom: 1rem;
+    padding: 4px 12px;
+    }
+    &-dropdown{
+      font-size: 16px;
+      padding: 0;
+      padding: 4px 0 8px 0;
+      img{
+        width: 20px;
+        height: 20px;
+        margin-left: 0.5rem;
       }
     }
+    &-pageButton{
+      width: 294px;
+      margin: 3rem auto 6rem auto;
+      button{
+        width: 42px;
+        height: 42px;
+        background-color: #ffffff;
+        color: $blue-600;
+        border: 1px solid $gray-300;
+        &:hover {
+          background: $blue-700;
+          color: #ffffff;
+        }
+      }
+    }
+  }
 }
 
 .ms-5 {
@@ -181,4 +285,23 @@ $top10-margin-y: 1.5rem;
 
 .me-5 {
   margin-right: 36px !important;
+}
+
+.mb-12px {
+  margin-bottom: 12px;
+}
+
+.me-5 {
+  margin-right: 36px !important;
+}
+
+.tag-padding{
+  padding: 4px 16px;
+}
+
+.fit-content{
+  width: fit-content;
+  @include media-breakpoint-down(lg) {
+    width:auto
+  }
 }

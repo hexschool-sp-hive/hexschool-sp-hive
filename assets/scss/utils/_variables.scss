@@ -335,6 +335,7 @@ $theme-colors: (
   "magenta": $magenta,
   "blue-100": $blue-100,
   "blue-50": $blue-50,
+  "blue-800": $blue-800,
   "blue-200": $blue-200,
   "cyan": $cyan // custom,,,,
 ) !default;
@@ -439,9 +440,12 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  // 12px
   0_75r: $spacer * 0.75,
   // 20px
   1_25r: $spacer * 1.25,
+  // 32px
+  2r: $spacer * 2,
   // 40px
   2_5r: $spacer * 2.5,
   // 44px

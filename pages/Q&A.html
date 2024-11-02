@@ -45,15 +45,14 @@
           </div>
           <div class="boardA-content">
             <div class="col-lg-3 col-12 fixed-bg">
-              <!-- <div class="accordion fixed-left" id="accordionExample"></div> -->
-              <div class="accordion" id="accordionExample">
+              <div class="accordion" id="accordionMenu">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                       免費續用
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionMenu">
                     <div class="accordion-body">
                       
                       <ul class="side-menu free">
@@ -93,10 +92,10 @@
                       更換、續訂
                     </button>
                   </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionMenu">
                     <div class="accordion-body">
                       <ul class="side-menu renew">
-                        <li data-target="content-1">
+                        <li data-target="renew-1">
                           <div class="menucontent-lg">
                             <p>我想更改我的方案</p>
                           </div>
@@ -105,7 +104,7 @@
                             <p>沒問題！ 如果您通過信用卡訂閱，您可以通過我們的網站在“訂閱方案”部分更改計劃並選擇新訂閱方案。</p>
                           </div>
                         </li>
-                        <li data-target="content-2">
+                        <li data-target="renew-2">
                           <div class="menucontent-lg">
                             <p>我不想自動續訂</p>
                           </div>
@@ -114,7 +113,7 @@
                             <p>沒問題！您可以在訂閱設定中關閉自動續訂，這樣在目前訂閱週期結束後將不會再自動扣款。</p>
                           </div>
                         </li>
-                        <li data-target="content-3">
+                        <li data-target="renew-3">
                           <div class="menucontent-lg">
                             <p>變更訂閱方案會有額外的手續費嗎？</p>
                           </div>
@@ -123,7 +122,7 @@
                             <p>通常不會收取額外的手續費，但在降級或升級時可能需要支付或退回差額。</p>
                           </div>
                         </li>
-                        <li data-target="content-4">
+                        <li data-target="renew-4">
                           <div class="menucontent-lg">
                             <p>升級方案後，功能會立即生效嗎？</p>
                           </div>
@@ -143,7 +142,7 @@
                       訂閱退費相關
                     </button>
                   </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionMenu">
                     <div class="accordion-body">
                       <ul class="side-menu refund">
                         <li data-target="refund-1">
@@ -218,20 +217,20 @@
                 </div>
                 <div id="renew" class="QAcontent active">
                   <ul class="content-list renew-list">
-                    <li id="content-1">
+                    <li id="renew-1">
                       <h4>我想更改我的方案</h4>
                       <p>沒問題！ 如果您通過信用卡訂閱，您可以通過我們的網站在“訂閱方案”部分更改計劃並選擇新訂閱方案。</p>
                     </li>
-                    <li id="content-2">
+                    <li id="renew-2">
                       <h4>我不想自動續訂</h4>
                       <p>沒問題！您可以在訂閱設定中關閉自動續訂，這樣在目前訂閱週期結束後將不會再自動扣款。</p>
                     </li>
-                    <li id="content-3">
+                    <li id="renew-3">
                       <h4>變更訂閱方案會有額外的手續費嗎？</h4>
                       <p>通常不會收取額外的手續費，但在降級或升級時可能需要支付或退回差額。</p>
                     </li>
 
-                    <li id="content-4">
+                    <li id="renew-4">
                       <h4>升級方案後，功能會立即生效嗎？</h4>
                       <p>是的，升級到高級方案後，高級功能會立即解鎖，您可以立即使用這些功能。</p>
                     </li>
@@ -274,7 +273,7 @@
   <script type="text/javascript">
 
     // 監聽 accordion 切換事件，並顯示對應的 QAcontent
-    document.getElementById('accordionExample').addEventListener('shown.bs.collapse', function (event) {
+    document.getElementById('accordionMenu').addEventListener('shown.bs.collapse', function (event) {
       // 移除所有 QAcontent 的 active class
       document.querySelectorAll('.QAcontent').forEach(function(content) {
         content.classList.remove('active');

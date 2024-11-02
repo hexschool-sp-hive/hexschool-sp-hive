@@ -108,13 +108,14 @@
     
 
     .accordion{
+
       width: 100%;
-      // @media(max-width: 992px){
-      //   padding: 0 0;
-      // }
+    
+      
       padding: 0 0;
       @include media-breakpoint-up(lg) {
         padding: 56px 0;
+        width: 303px;
       }
 
       &-header{
@@ -167,7 +168,6 @@
     
         .side-menu {
           box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px #00000033 inset;
-          
           
           list-style: none;
           text-align: left;
@@ -240,7 +240,8 @@
     
           li.active {
             background: $white;
-            box-shadow: -4px -4px 0px 0px $gray-400 inset;
+            //box-shadow: -4px -4px 0px 0px $gray-400 inset;
+            box-shadow: 4px 4px 0px 0px $blue-100 inset, -4px -4px 0px 0px $blue-100 inset;
           }
         }
       }
@@ -248,8 +249,13 @@
     }
     .fixed-bg{
       max-width: 100%;
+      //width: 100%;
       background-color: $blue-100; /* 背景色設置 */
       box-shadow: 4px 4px 0px 0px #eff6fc inset,  -4px -4px 0px 0px $gray-400 inset;
+
+      @include media-breakpoint-up(lg) {
+        width: 303px;
+      }
     }
     /* 使 accordion 固定 */
     // .fixed-left {

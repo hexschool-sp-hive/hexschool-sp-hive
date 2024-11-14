@@ -1,11 +1,11 @@
 $board-border-size: 4px;
 .banner {
-  background-image: url("../assets/images/banner_bg_mobile.jpg");
+  background-image: url("../images/banner_bg_mobile.jpg");
   background-size: cover;
   background-position: center bottom;
   height: 667px;
   @include media-breakpoint-up(lg) {
-    background-image: url("../assets/images/banner_bg_desktop.jpg");
+    background-image: url("../images/banner_bg_desktop.jpg");
     background-position: 30%;
     height: 720px;
   }
